@@ -1,0 +1,36 @@
+aid: apache-dubbo
+name: Apache Dubbo
+description: >-
+  Apache Dubbo is a high-performance, Java-based open-source RPC framework that provides service discovery, traffic management, and observability capabilities for building enterprise-level microservices. It supports multiple protocols including Triple (gRPC-compatible), Dubbo, and REST.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - RPC
+  - Microservices
+  - Service Mesh
+  - Java
+  - Go
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: apache-dubbo:apache-dubbo
+    name: Apache Dubbo
+    description: >-
+      Dubbo provides RPC framework APIs in Java and Go for building microservices, with support for multiple protocols (Triple/gRPC, Dubbo, REST), service registry integration, traffic management, and an Admin REST API for service governance.
+    humanURL: https://dubbo.apache.org/en/overview/what/overview/
+    tags:
+      - RPC
+      - Java
+      - Go
+      - Microservices
+    properties:
+      - type: Documentation
+        url: https://dubbo.apache.org/en/overview/what/overview/
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
