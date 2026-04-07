@@ -7,11 +7,11 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - RPC
-  - Microservices
-  - Service Mesh
-  - Java
   - Go
+  - Java
+  - Microservices
+  - RPC
+  - Service Mesh
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -24,10 +24,10 @@ apis:
       Dubbo provides RPC framework APIs in Java and Go for building microservices, with support for multiple protocols (Triple/gRPC, Dubbo, REST), service registry integration, traffic management, and an Admin REST API for service governance.
     humanURL: https://dubbo.apache.org/en/overview/what/overview/
     tags:
-      - RPC
-      - Java
       - Go
+      - Java
       - Microservices
+      - RPC
     properties:
       - type: Documentation
         url: https://dubbo.apache.org/en/overview/what/overview/
