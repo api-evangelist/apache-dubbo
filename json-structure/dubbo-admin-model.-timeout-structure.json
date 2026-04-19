@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-timeout-structure.json",
+  "name": "model.Timeout",
+  "description": "model.Timeout schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "group": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "timeout": {
+      "type": "int32"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "service",
+    "timeout"
+  ]
+}

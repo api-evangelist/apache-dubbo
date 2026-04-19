@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-argument-schema.json",
+  "title": "model.Argument",
+  "description": "model.Argument schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "group": {
+      "type": "string"
+    },
+    "rule": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "rule",
+    "service"
+  ]
+}

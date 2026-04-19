@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-param-match-schema.json",
+  "title": "model.ParamMatch",
+  "description": "model.ParamMatch schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "value": {
+      "$ref": "#/definitions/model.StringMatch"
+    }
+  }
+}

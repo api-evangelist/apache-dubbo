@@ -1,0 +1,412 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "dubbo": "https://dubbo.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "model.Mock": "dubbo:model.Mock",
+    "group": {
+      "@id": "dubbo:group",
+      "@type": "xsd:string"
+    },
+    "mock": {
+      "@id": "dubbo:mock",
+      "@type": "xsd:string"
+    },
+    "service": {
+      "@id": "dubbo:service",
+      "@type": "xsd:string"
+    },
+    "version": "schema:version",
+    "model.Consumer": "dubbo:model.Consumer",
+    "address": {
+      "@id": "dubbo:address",
+      "@type": "xsd:string"
+    },
+    "alived": {
+      "@id": "dubbo:alived",
+      "@type": "xsd:integer"
+    },
+    "application": {
+      "@id": "dubbo:application",
+      "@type": "xsd:string"
+    },
+    "collected": {
+      "@id": "dubbo:collected",
+      "@type": "xsd:string"
+    },
+    "created": {
+      "@id": "dubbo:created",
+      "@type": "xsd:string"
+    },
+    "expired": {
+      "@id": "dubbo:expired",
+      "@type": "xsd:string"
+    },
+    "hash": {
+      "@id": "dubbo:hash",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "dubbo:id",
+      "@type": "xsd:integer"
+    },
+    "ids": {
+      "@id": "dubbo:ids",
+      "@container": "@set",
+      "@type": "xsd:integer"
+    },
+    "miss": {
+      "@id": "dubbo:miss",
+      "@type": "xsd:boolean"
+    },
+    "modified": {
+      "@id": "dubbo:modified",
+      "@type": "xsd:string"
+    },
+    "now": {
+      "@id": "dubbo:now",
+      "@type": "xsd:string"
+    },
+    "operator": {
+      "@id": "dubbo:operator",
+      "@type": "xsd:string"
+    },
+    "operatorAddress": {
+      "@id": "dubbo:operatorAddress",
+      "@type": "xsd:string"
+    },
+    "parameters": {
+      "@id": "dubbo:parameters",
+      "@type": "xsd:string"
+    },
+    "registry": {
+      "@id": "dubbo:registry",
+      "@type": "xsd:string"
+    },
+    "result": {
+      "@id": "dubbo:result",
+      "@type": "xsd:string"
+    },
+    "statistics": {
+      "@id": "dubbo:statistics",
+      "@type": "xsd:string"
+    },
+    "username": {
+      "@id": "dubbo:username",
+      "@type": "xsd:string"
+    },
+    "model.ParamMatch": "dubbo:model.ParamMatch",
+    "key": {
+      "@id": "dubbo:key",
+      "@type": "xsd:string"
+    },
+    "value": {
+      "@id": "dubbo:value",
+      "@type": "xsd:string"
+    },
+    "model.StringMatch": "dubbo:model.StringMatch",
+    "empty": {
+      "@id": "dubbo:empty",
+      "@type": "xsd:string"
+    },
+    "exact": {
+      "@id": "dubbo:exact",
+      "@type": "xsd:string"
+    },
+    "noempty": {
+      "@id": "dubbo:noempty",
+      "@type": "xsd:string"
+    },
+    "prefix": {
+      "@id": "dubbo:prefix",
+      "@type": "xsd:string"
+    },
+    "regex": {
+      "@id": "dubbo:regex",
+      "@type": "xsd:string"
+    },
+    "wildcard": {
+      "@id": "dubbo:wildcard",
+      "@type": "xsd:string"
+    },
+    "version.Version": "dubbo:version.Version",
+    "buildDate": {
+      "@id": "dubbo:buildDate",
+      "@type": "xsd:string"
+    },
+    "compiler": {
+      "@id": "dubbo:compiler",
+      "@type": "xsd:string"
+    },
+    "gitCommit": {
+      "@id": "dubbo:gitCommit",
+      "@type": "xsd:string"
+    },
+    "gitTreeState": {
+      "@id": "dubbo:gitTreeState",
+      "@type": "xsd:string"
+    },
+    "gitVersion": {
+      "@id": "dubbo:gitVersion",
+      "@type": "xsd:string"
+    },
+    "goVersion": {
+      "@id": "dubbo:goVersion",
+      "@type": "xsd:string"
+    },
+    "platform": {
+      "@id": "dubbo:platform",
+      "@type": "xsd:string"
+    },
+    "model.ConditionRouteDto": "dubbo:model.ConditionRouteDto",
+    "conditions": {
+      "@id": "dubbo:conditions",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "configVersion": {
+      "@id": "dubbo:configVersion",
+      "@type": "xsd:string"
+    },
+    "enabled": {
+      "@id": "dubbo:enabled",
+      "@type": "xsd:boolean"
+    },
+    "force": {
+      "@id": "dubbo:force",
+      "@type": "xsd:boolean"
+    },
+    "priority": {
+      "@id": "dubbo:priority",
+      "@type": "xsd:integer"
+    },
+    "runtime": {
+      "@id": "dubbo:runtime",
+      "@type": "xsd:boolean"
+    },
+    "serviceGroup": {
+      "@id": "dubbo:serviceGroup",
+      "@type": "xsd:string"
+    },
+    "serviceVersion": {
+      "@id": "dubbo:serviceVersion",
+      "@type": "xsd:string"
+    },
+    "model.ServiceDetailDTO": "dubbo:model.ServiceDetailDTO",
+    "consumers": {
+      "@id": "dubbo:consumers",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "metadata": {
+      "@id": "dubbo:metadata",
+      "@type": "xsd:string"
+    },
+    "providers": {
+      "@id": "dubbo:providers",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "model.Retry": "dubbo:model.Retry",
+    "retry": {
+      "@id": "dubbo:retry",
+      "@type": "xsd:integer"
+    },
+    "model.ListStringMatch": "dubbo:model.ListStringMatch",
+    "oneof": {
+      "@id": "dubbo:oneof",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "model.Accesslog": "dubbo:model.Accesslog",
+    "accesslog": {
+      "@id": "dubbo:accesslog",
+      "@type": "xsd:string"
+    },
+    "model.ClusterMetricsRes": "dubbo:model.ClusterMetricsRes",
+    "data": {
+      "@id": "dubbo:data",
+      "@type": "@id"
+    },
+    "model.Weight": "dubbo:model.Weight",
+    "match": {
+      "@id": "dubbo:match",
+      "@type": "xsd:string"
+    },
+    "weight": {
+      "@id": "dubbo:weight",
+      "@type": "xsd:integer"
+    },
+    "model.TagRouteDto": "dubbo:model.TagRouteDto",
+    "tags": {
+      "@id": "dubbo:tags",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "model.Metadata": "dubbo:model.Metadata",
+    "configCenter": {
+      "@id": "dubbo:configCenter",
+      "@type": "xsd:string"
+    },
+    "metadataCenter": {
+      "@id": "dubbo:metadataCenter",
+      "@type": "xsd:string"
+    },
+    "protocols": {
+      "@id": "dubbo:protocols",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "rules": {
+      "@id": "dubbo:rules",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "versions": {
+      "@id": "dubbo:versions",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "model.Region": "dubbo:model.Region",
+    "rule": {
+      "@id": "dubbo:rule",
+      "@type": "xsd:string"
+    },
+    "model.RegistrySource": "dubbo:model.RegistrySource",
+    "model.AddressMatch": "dubbo:model.AddressMatch",
+    "cird": {
+      "@id": "dubbo:cird",
+      "@type": "xsd:string"
+    },
+    "time.Duration": "dubbo:time.Duration",
+    "model.Argument": "dubbo:model.Argument",
+    "model.DynamicConfig": "dubbo:model.DynamicConfig",
+    "configs": {
+      "@id": "dubbo:configs",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "model.ListServiceByPage": "dubbo:model.ListServiceByPage",
+    "content": {
+      "@id": "dubbo:content",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "first": {
+      "@id": "dubbo:first",
+      "@type": "xsd:boolean"
+    },
+    "last": {
+      "@id": "dubbo:last",
+      "@type": "xsd:boolean"
+    },
+    "offset": {
+      "@id": "dubbo:offset",
+      "@type": "xsd:integer"
+    },
+    "pageNumber": {
+      "@id": "dubbo:pageNumber",
+      "@type": "xsd:string"
+    },
+    "size": {
+      "@id": "dubbo:size",
+      "@type": "xsd:string"
+    },
+    "totalElements": {
+      "@id": "dubbo:totalElements",
+      "@type": "xsd:integer"
+    },
+    "totalPages": {
+      "@id": "dubbo:totalPages",
+      "@type": "xsd:integer"
+    },
+    "model.OverrideConfig": "dubbo:model.OverrideConfig",
+    "addresses": {
+      "@id": "dubbo:addresses",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "applications": {
+      "@id": "dubbo:applications",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "providerAddresses": {
+      "@id": "dubbo:providerAddresses",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "services": {
+      "@id": "dubbo:services",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "side": {
+      "@id": "dubbo:side",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "dubbo:type",
+      "@type": "xsd:string"
+    },
+    "model.MockRule": "dubbo:model.MockRule",
+    "enable": {
+      "@id": "dubbo:enable",
+      "@type": "xsd:boolean"
+    },
+    "methodName": {
+      "@id": "dubbo:methodName",
+      "@type": "xsd:string"
+    },
+    "serviceName": {
+      "@id": "dubbo:serviceName",
+      "@type": "xsd:string"
+    },
+    "model.Gray": "dubbo:model.Gray",
+    "model.Tag": "dubbo:model.Tag",
+    "name": "schema:name",
+    "model.ConditionMatch": "dubbo:model.ConditionMatch",
+    "param": {
+      "@id": "dubbo:param",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "model.Timeout": "dubbo:model.Timeout",
+    "timeout": {
+      "@id": "dubbo:timeout",
+      "@type": "xsd:integer"
+    },
+    "model.FlowMetricsRes": "dubbo:model.FlowMetricsRes",
+    "model.ServiceDTO": "dubbo:model.ServiceDTO",
+    "appName": {
+      "@id": "dubbo:appName",
+      "@type": "xsd:string"
+    },
+    "registrySource": {
+      "@id": "dubbo:registrySource",
+      "@type": "xsd:string"
+    },
+    "model.Provider": "dubbo:model.Provider",
+    "dynamic": {
+      "@id": "dubbo:dynamic",
+      "@type": "xsd:boolean"
+    },
+    "serialization": {
+      "@id": "dubbo:serialization",
+      "@type": "xsd:string"
+    },
+    "url": "schema:url",
+    "model.ListMockRulesByPage": "dubbo:model.ListMockRulesByPage",
+    "total": {
+      "@id": "dubbo:total",
+      "@type": "xsd:integer"
+    },
+    "model.HTTPError": "dubbo:model.HTTPError",
+    "error": {
+      "@id": "dubbo:error",
+      "@type": "xsd:string"
+    }
+  }
+}

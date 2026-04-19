@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-param-match-structure.json",
+  "name": "model.ParamMatch",
+  "description": "model.ParamMatch schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-string-match-structure.json",
+  "name": "model.StringMatch",
+  "description": "model.StringMatch schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "empty": {
+      "type": "string"
+    },
+    "exact": {
+      "type": "string"
+    },
+    "noempty": {
+      "type": "string"
+    },
+    "prefix": {
+      "type": "string"
+    },
+    "regex": {
+      "type": "string"
+    },
+    "wildcard": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "application": "my-dubbo-app",
+  "tags": [
+    "example-value"
+  ]
+}

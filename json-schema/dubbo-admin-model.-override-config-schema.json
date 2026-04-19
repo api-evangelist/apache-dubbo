@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-override-config-schema.json",
+  "title": "model.OverrideConfig",
+  "description": "model.OverrideConfig schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "addresses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "applications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "match": {
+      "$ref": "#/definitions/model.ConditionMatch"
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "providerAddresses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "side": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}

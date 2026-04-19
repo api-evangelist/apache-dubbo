@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-version.-version-structure.json",
+  "name": "version.Version",
+  "description": "version.Version schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "buildDate": {
+      "type": "string"
+    },
+    "compiler": {
+      "type": "string"
+    },
+    "gitCommit": {
+      "type": "string"
+    },
+    "gitTreeState": {
+      "type": "string"
+    },
+    "gitVersion": {
+      "type": "string"
+    },
+    "goVersion": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    }
+  }
+}

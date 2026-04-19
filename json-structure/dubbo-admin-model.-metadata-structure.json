@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-metadata-structure.json",
+  "name": "model.Metadata",
+  "description": "model.Metadata schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "configCenter": {
+      "type": "string"
+    },
+    "metadataCenter": {
+      "type": "string"
+    },
+    "protocols": {
+      "type": "array"
+    },
+    "registry": {
+      "type": "string"
+    },
+    "rules": {
+      "type": "array"
+    },
+    "versions": {
+      "type": "array"
+    }
+  }
+}

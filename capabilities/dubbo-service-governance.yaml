@@ -1,0 +1,161 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: "Apache Dubbo Service Governance"
+  description: "Unified capability for governing Apache Dubbo microservices — managing services, applications, traffic rules, routing policies, and monitoring cluster health. Designed for platform engineers and SREs managing Dubbo clusters."
+  tags:
+    - Apache Dubbo
+    - Service Governance
+    - Microservices
+    - Traffic Management
+    - Platform Engineering
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      DUBBO_ADMIN_BASE_URL: DUBBO_ADMIN_BASE_URL
+
+capability:
+  consumes:
+    - import: dubbo-admin
+      location: ./shared/dubbo-admin.yaml
+
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: dubbo-governance-api
+      description: "Unified REST API for Apache Dubbo service governance."
+      resources:
+        - path: /v1/applications
+          name: applications
+          description: Manage Dubbo applications
+          operations:
+            - method: GET
+              name: list-applications
+              description: List all registered Dubbo applications
+              call: "dubbo-admin.list-applications"
+              with:
+                env: "rest.env"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/services
+          name: services
+          description: Manage Dubbo services
+          operations:
+            - method: GET
+              name: list-services
+              description: List all registered Dubbo services
+              call: "dubbo-admin.list-services"
+              with:
+                env: "rest.env"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/traffic-rules
+          name: traffic-rules
+          description: Manage traffic routing rules
+          operations:
+            - method: GET
+              name: list-condition-routes
+              description: List condition routing rules
+              call: "dubbo-admin.list-condition-routes"
+              with:
+                env: "rest.env"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+            - method: POST
+              name: create-condition-route
+              description: Create a new condition routing rule
+              call: "dubbo-admin.create-condition-route"
+              with:
+                env: "rest.env"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/metrics
+          name: metrics
+          description: Cluster monitoring metrics
+          operations:
+            - method: GET
+              name: get-cluster-metrics
+              description: Get Dubbo cluster health metrics
+              call: "dubbo-admin.get-cluster-metrics"
+              with:
+                env: "rest.env"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9090
+      namespace: dubbo-governance-mcp
+      transport: http
+      description: "MCP server for AI-assisted Apache Dubbo service governance."
+      tools:
+        - name: list-dubbo-applications
+          description: List all applications registered in the Dubbo cluster
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "dubbo-admin.list-applications"
+          with:
+            env: "tools.env"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: list-dubbo-services
+          description: List all services registered in the Dubbo cluster
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "dubbo-admin.list-services"
+          with:
+            env: "tools.env"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: list-traffic-rules
+          description: List all condition routing rules in the cluster
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "dubbo-admin.list-condition-routes"
+          with:
+            env: "tools.env"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: create-traffic-rule
+          description: Create a new condition routing rule for traffic management
+          hints:
+            readOnly: false
+            destructive: false
+            idempotent: false
+          call: "dubbo-admin.create-condition-route"
+          with:
+            env: "tools.env"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: get-cluster-metrics
+          description: Get health and performance metrics for the Dubbo cluster
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "dubbo-admin.get-cluster-metrics"
+          with:
+            env: "tools.env"
+          outputParameters:
+            - type: object
+              mapping: "$."

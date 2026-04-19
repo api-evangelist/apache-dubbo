@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-service-detail-dto-structure.json",
+  "name": "model.ServiceDetailDTO",
+  "description": "model.ServiceDetailDTO schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "application": {
+      "type": "string"
+    },
+    "consumers": {
+      "type": "array"
+    },
+    "metadata": {
+      "type": "string"
+    },
+    "providers": {
+      "type": "array"
+    },
+    "service": {
+      "type": "string"
+    }
+  }
+}

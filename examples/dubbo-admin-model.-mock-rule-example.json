@@ -1,0 +1,7 @@
+{
+  "enable": true,
+  "id": 1,
+  "methodName": "example-service",
+  "rule": "conditions: []",
+  "serviceName": "example-service"
+}

@@ -1,0 +1,11 @@
+{
+  "application": "my-dubbo-app",
+  "consumers": [
+    "example-value"
+  ],
+  "metadata": "example-value",
+  "providers": [
+    "500123"
+  ],
+  "service": "com.example.DemoService"
+}

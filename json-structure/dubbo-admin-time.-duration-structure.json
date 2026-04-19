@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-time.-duration-structure.json",
+  "name": "time.Duration",
+  "description": "time.Duration schema from Dubbo Admin API",
+  "type": "int32"
+}

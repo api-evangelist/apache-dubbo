@@ -1,0 +1,12 @@
+{
+  "application": "my-dubbo-app",
+  "configVersion": "1.0.0",
+  "configs": [
+    "example-value"
+  ],
+  "enabled": true,
+  "id": "500123",
+  "service": "com.example.DemoService",
+  "serviceGroup": "com.example.DemoService",
+  "serviceVersion": "1.0.0"
+}

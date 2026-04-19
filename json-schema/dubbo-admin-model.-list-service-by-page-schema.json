@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-list-service-by-page-schema.json",
+  "title": "model.ListServiceByPage",
+  "description": "model.ListServiceByPage schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/model.ServiceDTO"
+      }
+    },
+    "first": {
+      "type": "boolean"
+    },
+    "last": {
+      "type": "boolean"
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "pageNumber": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "totalElements": {
+      "type": "integer"
+    },
+    "totalPages": {
+      "type": "integer"
+    }
+  }
+}

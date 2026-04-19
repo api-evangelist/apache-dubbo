@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-accesslog-schema.json",
+  "title": "model.Accesslog",
+  "description": "model.Accesslog schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "accesslog": {
+      "type": "string"
+    },
+    "application": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "accesslog",
+    "application"
+  ]
+}

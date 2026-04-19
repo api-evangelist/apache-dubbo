@@ -1,0 +1,6 @@
+{
+  "group": "default",
+  "mock": "example-value",
+  "service": "com.example.DemoService",
+  "version": "1.0.0"
+}

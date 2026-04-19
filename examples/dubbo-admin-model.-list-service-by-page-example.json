@@ -1,0 +1,12 @@
+{
+  "content": [
+    "example-value"
+  ],
+  "first": true,
+  "last": true,
+  "offset": 1,
+  "pageNumber": "example-value",
+  "size": "example-value",
+  "totalElements": 1,
+  "totalPages": 1
+}

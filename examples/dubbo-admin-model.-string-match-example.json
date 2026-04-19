@@ -1,0 +1,8 @@
+{
+  "empty": "example-value",
+  "exact": "example-value",
+  "noempty": "example-value",
+  "prefix": "example-value",
+  "regex": "example-value",
+  "wildcard": "example-value"
+}

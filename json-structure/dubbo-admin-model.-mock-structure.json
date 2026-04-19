@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-mock-structure.json",
+  "name": "model.Mock",
+  "description": "model.Mock schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "group": {
+      "type": "string"
+    },
+    "mock": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "mock",
+    "service"
+  ]
+}

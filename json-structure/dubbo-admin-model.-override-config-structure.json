@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-override-config-structure.json",
+  "name": "model.OverrideConfig",
+  "description": "model.OverrideConfig schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "addresses": {
+      "type": "array"
+    },
+    "applications": {
+      "type": "array"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "match": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "providerAddresses": {
+      "type": "array"
+    },
+    "services": {
+      "type": "array"
+    },
+    "side": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}

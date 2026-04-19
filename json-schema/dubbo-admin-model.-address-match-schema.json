@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-address-match-schema.json",
+  "title": "model.AddressMatch",
+  "description": "model.AddressMatch schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "cird": {
+      "type": "string"
+    },
+    "exact": {
+      "type": "string"
+    },
+    "wildcard": {
+      "type": "string"
+    }
+  }
+}

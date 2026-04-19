@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-consumer-schema.json",
+  "title": "model.Consumer",
+  "description": "model.Consumer schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "string"
+    },
+    "alived": {
+      "type": "integer"
+    },
+    "application": {
+      "type": "string"
+    },
+    "collected": {
+      "$ref": "#/definitions/time.Duration"
+    },
+    "created": {
+      "type": "string"
+    },
+    "expired": {
+      "$ref": "#/definitions/time.Duration"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "ids": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "miss": {
+      "type": "boolean"
+    },
+    "modified": {
+      "type": "string"
+    },
+    "now": {
+      "type": "string"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "operatorAddress": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "string"
+    },
+    "registry": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "statistics": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    }
+  }
+}

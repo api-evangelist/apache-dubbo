@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-consumer-structure.json",
+  "name": "model.Consumer",
+  "description": "model.Consumer schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "string"
+    },
+    "alived": {
+      "type": "int32"
+    },
+    "application": {
+      "type": "string"
+    },
+    "collected": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string"
+    },
+    "expired": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "id": {
+      "type": "int32"
+    },
+    "ids": {
+      "type": "array"
+    },
+    "miss": {
+      "type": "boolean"
+    },
+    "modified": {
+      "type": "string"
+    },
+    "now": {
+      "type": "string"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "operatorAddress": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "string"
+    },
+    "registry": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "statistics": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    }
+  }
+}

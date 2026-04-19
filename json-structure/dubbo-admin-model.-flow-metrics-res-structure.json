@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-flow-metrics-res-structure.json",
+  "name": "model.FlowMetricsRes",
+  "description": "model.FlowMetricsRes schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object"
+    }
+  }
+}

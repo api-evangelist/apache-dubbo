@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-weight-structure.json",
+  "name": "model.Weight",
+  "description": "model.Weight schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "match": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "int32"
+    }
+  },
+  "required": [
+    "match",
+    "weight"
+  ]
+}

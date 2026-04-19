@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-region-structure.json",
+  "name": "model.Region",
+  "description": "model.Region schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "group": {
+      "type": "string"
+    },
+    "rule": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "rule",
+    "service"
+  ]
+}

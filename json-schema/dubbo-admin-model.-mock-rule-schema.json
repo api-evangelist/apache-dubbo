@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-mock-rule-schema.json",
+  "title": "model.MockRule",
+  "description": "model.MockRule schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "enable": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "methodName": {
+      "type": "string"
+    },
+    "rule": {
+      "type": "string"
+    },
+    "serviceName": {
+      "type": "string"
+    }
+  }
+}

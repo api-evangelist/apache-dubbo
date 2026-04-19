@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-dynamic-config-schema.json",
+  "title": "model.DynamicConfig",
+  "description": "model.DynamicConfig schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "application": {
+      "type": "string"
+    },
+    "configVersion": {
+      "type": "string"
+    },
+    "configs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/model.OverrideConfig"
+      }
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "serviceGroup": {
+      "type": "string"
+    },
+    "serviceVersion": {
+      "type": "string"
+    }
+  }
+}

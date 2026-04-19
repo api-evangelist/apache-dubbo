@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-timeout-schema.json",
+  "title": "model.Timeout",
+  "description": "model.Timeout schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "group": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "timeout": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "service",
+    "timeout"
+  ]
+}

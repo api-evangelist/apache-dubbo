@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-gray-schema.json",
+  "title": "model.Gray",
+  "description": "model.Gray schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "application": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/model.Tag"
+      }
+    }
+  },
+  "required": [
+    "application",
+    "tags"
+  ]
+}

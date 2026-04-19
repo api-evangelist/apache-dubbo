@@ -1,0 +1,14 @@
+{
+  "configCenter": "example-value",
+  "metadataCenter": "example-value",
+  "protocols": [
+    "dubbo"
+  ],
+  "registry": "example-value",
+  "rules": [
+    "conditions: []"
+  ],
+  "versions": [
+    "1.0.0"
+  ]
+}

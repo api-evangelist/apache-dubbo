@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-provider-schema.json",
+  "title": "model.Provider",
+  "description": "model.Provider schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "string"
+    },
+    "alived": {
+      "type": "integer"
+    },
+    "application": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string"
+    },
+    "dynamic": {
+      "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "expired": {
+      "$ref": "#/definitions/time.Duration"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "ids": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "miss": {
+      "type": "boolean"
+    },
+    "modified": {
+      "type": "string"
+    },
+    "now": {
+      "type": "string"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "operatorAddress": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "string"
+    },
+    "registry": {
+      "type": "string"
+    },
+    "registrySource": {
+      "$ref": "#/definitions/model.RegistrySource"
+    },
+    "serialization": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "timeout": {
+      "type": "integer"
+    },
+    "url": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "integer"
+    }
+  }
+}

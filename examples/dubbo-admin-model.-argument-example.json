@@ -1,0 +1,6 @@
+{
+  "group": "default",
+  "rule": "conditions: []",
+  "service": "com.example.DemoService",
+  "version": "1.0.0"
+}

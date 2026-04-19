@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-list-mock-rules-by-page-structure.json",
+  "name": "model.ListMockRulesByPage",
+  "description": "model.ListMockRulesByPage schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array"
+    },
+    "total": {
+      "type": "int32"
+    }
+  }
+}

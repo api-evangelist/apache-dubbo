@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-service-detail-dto-schema.json",
+  "title": "model.ServiceDetailDTO",
+  "description": "model.ServiceDetailDTO schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "application": {
+      "type": "string"
+    },
+    "consumers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/model.Consumer"
+      }
+    },
+    "metadata": {},
+    "providers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/model.Provider"
+      }
+    },
+    "service": {
+      "type": "string"
+    }
+  }
+}

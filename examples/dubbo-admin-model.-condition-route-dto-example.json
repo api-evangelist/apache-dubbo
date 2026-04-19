@@ -1,0 +1,15 @@
+{
+  "application": "my-dubbo-app",
+  "conditions": [
+    "example-value"
+  ],
+  "configVersion": "1.0.0",
+  "enabled": true,
+  "force": true,
+  "id": "500123",
+  "priority": 1,
+  "runtime": true,
+  "service": "com.example.DemoService",
+  "serviceGroup": "com.example.DemoService",
+  "serviceVersion": "1.0.0"
+}

@@ -1,0 +1,175 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Apache Dubbo"
+  description: "Vocabulary taxonomy for Apache Dubbo RPC framework covering service governance, traffic management, observability, and multi-language SDK operations."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: dubbo-admin
+      version: "0.7.0"
+      baseUrl: "http://localhost:38080"
+      status: active
+      description: Dubbo Admin REST API for cluster governance
+
+  resources:
+    - name: applications
+      apis: [dubbo-admin]
+      actions: [list, get, search]
+    - name: services
+      apis: [dubbo-admin]
+      actions: [list, get, search]
+    - name: consumers
+      apis: [dubbo-admin]
+      actions: [list, get]
+    - name: condition-routes
+      apis: [dubbo-admin]
+      actions: [list, get, create, update, delete]
+    - name: tag-routes
+      apis: [dubbo-admin]
+      actions: [list, get, create, update, delete]
+    - name: override-rules
+      apis: [dubbo-admin]
+      actions: [list, get, create, update, delete]
+    - name: mock-rules
+      apis: [dubbo-admin]
+      actions: [list, get, create, update, delete]
+    - name: metrics
+      apis: [dubbo-admin]
+      actions: [get]
+
+  actions:
+    - name: list
+      httpMethods: [GET]
+      pattern: read
+    - name: get
+      httpMethods: [GET]
+      pattern: read
+    - name: create
+      httpMethods: [POST]
+      pattern: write
+    - name: update
+      httpMethods: [PUT]
+      pattern: write
+    - name: delete
+      httpMethods: [DELETE]
+      pattern: destructive
+    - name: search
+      httpMethods: [GET]
+      pattern: query
+
+  schemas:
+    core:
+      - name: ApplicationDTO
+        description: Dubbo application registration details
+      - name: ServiceDTO
+        description: Dubbo service details including protocol and version
+      - name: InstanceDTO
+        description: Service instance with host, port, and metadata
+    governance:
+      - name: ConditionRouteDTO
+        description: Condition-based routing rule
+      - name: TagRouteDTO
+        description: Tag-based routing rule for gray releases
+      - name: DynamicConfigDTO
+        description: Dynamic configuration override for services
+      - name: WeightDTO
+        description: Weight-based load balancing configuration
+
+  parameters:
+    identifiers:
+      - name: env
+        description: Environment identifier (e.g. dev, staging, prod)
+      - name: service
+        description: Fully qualified Dubbo service name
+      - name: app
+        description: Application name
+    filters:
+      - name: serviceVersion
+        description: Filter by service version
+      - name: serviceGroup
+        description: Filter by service group
+
+  enums:
+    protocols:
+      - dubbo
+      - triple
+      - rest
+      - grpc
+      - jsonrpc
+      - thrift
+      - hessian2
+    registries:
+      - nacos
+      - zookeeper
+      - kubernetes
+      - consul
+      - etcd
+      - redis
+
+  authentication:
+    schemes:
+      - type: None
+        description: Dubbo Admin API typically runs within internal network without auth by default
+
+capability:
+  workflows:
+    - name: Service Governance
+      file: capabilities/dubbo-service-governance.yaml
+      description: Manage services, applications, traffic rules, and cluster monitoring
+      apis: [dubbo-admin]
+      toolCount: 5
+      personas: [Platform Engineer, SRE]
+      domains: [Service Management, Traffic Control, Monitoring]
+
+  personas:
+    - id: platform-engineer
+      name: Platform Engineer
+      description: Engineers managing the Dubbo cluster infrastructure and governance policies
+      workflows: [Service Governance]
+    - id: sre
+      name: Site Reliability Engineer
+      description: SREs monitoring cluster health and responding to service incidents
+      workflows: [Service Governance]
+
+  domains:
+    - name: Service Management
+      description: Discovery, registration, and lifecycle of Dubbo services and applications
+    - name: Traffic Control
+      description: Routing rules, load balancing, gray releases, and traffic shaping
+    - name: Monitoring
+      description: Cluster metrics, flow metrics, and observability
+
+  namespaces:
+    - name: dubbo-admin
+      type: consumed
+    - name: dubbo-governance-api
+      type: rest-exposed
+      port: 8080
+    - name: dubbo-governance-mcp
+      type: mcp-exposed
+      port: 9090
+
+  binds:
+    - name: DUBBO_ADMIN_BASE_URL
+      workflows: [Service Governance]
+
+crossReference:
+  - resource: applications
+    operations: [list-applications]
+    workflows: [Service Governance]
+    personas: [Platform Engineer, SRE]
+  - resource: services
+    operations: [list-services]
+    workflows: [Service Governance]
+    personas: [Platform Engineer, SRE]
+  - resource: traffic-rules
+    operations: [list-condition-routes, create-condition-route]
+    workflows: [Service Governance]
+    personas: [Platform Engineer]
+  - resource: metrics
+    operations: [get-cluster-metrics]
+    workflows: [Service Governance]
+    personas: [SRE]

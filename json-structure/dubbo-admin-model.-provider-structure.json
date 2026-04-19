@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-provider-structure.json",
+  "name": "model.Provider",
+  "description": "model.Provider schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "string"
+    },
+    "alived": {
+      "type": "int32"
+    },
+    "application": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string"
+    },
+    "dynamic": {
+      "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "expired": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "id": {
+      "type": "int32"
+    },
+    "ids": {
+      "type": "array"
+    },
+    "miss": {
+      "type": "boolean"
+    },
+    "modified": {
+      "type": "string"
+    },
+    "now": {
+      "type": "string"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "operatorAddress": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "string"
+    },
+    "registry": {
+      "type": "string"
+    },
+    "registrySource": {
+      "type": "string"
+    },
+    "serialization": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "timeout": {
+      "type": "int32"
+    },
+    "url": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "int32"
+    }
+  }
+}

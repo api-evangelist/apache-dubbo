@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-list-string-match-structure.json",
+  "name": "model.ListStringMatch",
+  "description": "model.ListStringMatch schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "oneof": {
+      "type": "array"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "address": "10.0.0.1:20880",
+  "application": "my-dubbo-app",
+  "param": [
+    "example-value"
+  ],
+  "service": "com.example.DemoService"
+}

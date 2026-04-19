@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-list-service-by-page-structure.json",
+  "name": "model.ListServiceByPage",
+  "description": "model.ListServiceByPage schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array"
+    },
+    "first": {
+      "type": "boolean"
+    },
+    "last": {
+      "type": "boolean"
+    },
+    "offset": {
+      "type": "int32"
+    },
+    "pageNumber": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "totalElements": {
+      "type": "int32"
+    },
+    "totalPages": {
+      "type": "int32"
+    }
+  }
+}

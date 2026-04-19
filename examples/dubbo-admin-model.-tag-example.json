@@ -1,0 +1,9 @@
+{
+  "addresses": [
+    "10.0.0.1:20880"
+  ],
+  "match": [
+    "example-value"
+  ],
+  "name": "example-service"
+}

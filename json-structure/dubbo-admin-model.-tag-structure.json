@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-tag-structure.json",
+  "name": "model.Tag",
+  "description": "model.Tag schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "addresses": {
+      "type": "array"
+    },
+    "match": {
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "match",
+    "name"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-gray-structure.json",
+  "name": "model.Gray",
+  "description": "model.Gray schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "application": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "application",
+    "tags"
+  ]
+}

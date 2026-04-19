@@ -1,0 +1,28 @@
+{
+  "address": "10.0.0.1:20880",
+  "alived": 1,
+  "application": "my-dubbo-app",
+  "created": "example-value",
+  "dynamic": true,
+  "enabled": true,
+  "expired": "example-value",
+  "hash": "example-value",
+  "id": 1,
+  "ids": [
+    1
+  ],
+  "miss": true,
+  "modified": "example-value",
+  "now": "example-value",
+  "operator": "example-value",
+  "operatorAddress": "10.0.0.1:20880",
+  "parameters": "example-value",
+  "registry": "example-value",
+  "registrySource": "example-value",
+  "serialization": "example-value",
+  "service": "com.example.DemoService",
+  "timeout": 1,
+  "url": "https://example.com",
+  "username": "example-service",
+  "weight": 1
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-list-string-match-schema.json",
+  "title": "model.ListStringMatch",
+  "description": "model.ListStringMatch schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "oneof": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/model.StringMatch"
+      }
+    }
+  }
+}

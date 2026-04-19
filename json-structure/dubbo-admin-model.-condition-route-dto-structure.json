@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-structure/dubbo-admin-model.-condition-route-dto-structure.json",
+  "name": "model.ConditionRouteDto",
+  "description": "model.ConditionRouteDto schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "application": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "array"
+    },
+    "configVersion": {
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "force": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "int32"
+    },
+    "runtime": {
+      "type": "boolean"
+    },
+    "service": {
+      "type": "string"
+    },
+    "serviceGroup": {
+      "type": "string"
+    },
+    "serviceVersion": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "conditions",
+    "configVersion",
+    "enabled"
+  ]
+}

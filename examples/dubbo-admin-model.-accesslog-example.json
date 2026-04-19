@@ -1,0 +1,4 @@
+{
+  "accesslog": "example-value",
+  "application": "my-dubbo-app"
+}

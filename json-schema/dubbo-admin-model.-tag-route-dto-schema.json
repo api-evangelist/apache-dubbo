@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-tag-route-dto-schema.json",
+  "title": "model.TagRouteDto",
+  "description": "model.TagRouteDto schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "application": {
+      "type": "string"
+    },
+    "configVersion": {
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "force": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "runtime": {
+      "type": "boolean"
+    },
+    "service": {
+      "type": "string"
+    },
+    "serviceGroup": {
+      "type": "string"
+    },
+    "serviceVersion": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/model.Tag"
+      }
+    }
+  },
+  "required": [
+    "configVersion",
+    "enabled",
+    "tags"
+  ]
+}

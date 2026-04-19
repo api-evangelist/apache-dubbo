@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-tag-schema.json",
+  "title": "model.Tag",
+  "description": "model.Tag schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "addresses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "match": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/model.ParamMatch"
+      }
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "match",
+    "name"
+  ]
+}

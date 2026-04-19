@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-weight-schema.json",
+  "title": "model.Weight",
+  "description": "model.Weight schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "match": {
+      "$ref": "#/definitions/model.ConditionMatch"
+    },
+    "weight": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "match",
+    "weight"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "addresses": [
+    "10.0.0.1:20880"
+  ],
+  "applications": [
+    "my-dubbo-app"
+  ],
+  "enabled": true,
+  "match": "example-value",
+  "parameters": {},
+  "providerAddresses": [
+    "500123"
+  ],
+  "services": [
+    "com.example.DemoService"
+  ],
+  "side": "500123",
+  "type": "example-value"
+}

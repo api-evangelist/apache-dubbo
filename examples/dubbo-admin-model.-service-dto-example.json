@@ -1,0 +1,7 @@
+{
+  "appName": "example-service",
+  "group": "default",
+  "registrySource": "example-value",
+  "service": "com.example.DemoService",
+  "version": "1.0.0"
+}

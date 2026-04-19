@@ -1,0 +1,9 @@
+{
+  "buildDate": "example-value",
+  "compiler": "example-value",
+  "gitCommit": "example-value",
+  "gitTreeState": "example-value",
+  "gitVersion": "1.0.0",
+  "goVersion": "1.0.0",
+  "platform": "example-value"
+}

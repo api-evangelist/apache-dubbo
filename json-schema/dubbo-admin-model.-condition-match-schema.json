@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-model.-condition-match-schema.json",
+  "title": "model.ConditionMatch",
+  "description": "model.ConditionMatch schema from Dubbo Admin API",
+  "type": "object",
+  "properties": {
+    "address": {
+      "$ref": "#/definitions/model.AddressMatch"
+    },
+    "application": {
+      "$ref": "#/definitions/model.ListStringMatch"
+    },
+    "param": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/model.ParamMatch"
+      }
+    },
+    "service": {
+      "$ref": "#/definitions/model.ListStringMatch"
+    }
+  }
+}

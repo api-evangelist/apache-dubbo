@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/json-schema/dubbo-admin-time.-duration-schema.json",
+  "title": "time.Duration",
+  "description": "time.Duration schema from Dubbo Admin API",
+  "type": "integer",
+  "enum": [
+    1,
+    1000,
+    1000000,
+    1000000000,
+    60000000000,
+    3600000000000,
+    1,
+    1000,
+    1000000,
+    1000000000,
+    60000000000,
+    3600000000000
+  ]
+}
