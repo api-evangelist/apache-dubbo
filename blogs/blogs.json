@@ -1,0 +1,13 @@
+{
+  "repo": "apache-dubbo",
+  "feeds": [
+    {
+      "source": "https://dubbo.apache.org/en/blog/",
+      "feed_url": "https://dubbo.apache.org/en/blog/index.xml",
+      "title": "Apache Dubbo Blog on Apache Dubbo",
+      "saved": 0
+    }
+  ],
+  "fetched": "2026-05-09T20:17:51Z",
+  "post_count": 0
+}
