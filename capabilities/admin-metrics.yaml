@@ -1,0 +1,163 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Dubbo-Admin API — metrics
+  description: 'Dubbo-Admin API — metrics. 4 operations. Lead operation: Apache Dubbo Show Cluster Overview. Self-contained
+    Naftiko capability covering one Apache Dubbo business surface.'
+  tags:
+  - Apache Dubbo
+  - metrics
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    APACHE_DUBBO_API_KEY: APACHE_DUBBO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: admin-metrics
+    baseUri: https://127.0.0.1:38080
+    description: Dubbo-Admin API — metrics business capability. Self-contained, no shared references.
+    resources:
+    - name: api-env-metrics-cluster
+      path: /api/{env}/metrics/cluster
+      operations:
+      - name: get
+        method: GET
+        description: Apache Dubbo Show Cluster Overview
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-env-metrics-flow
+      path: /api/{env}/metrics/flow
+      operations:
+      - name: get
+        method: GET
+        description: Apache Dubbo Show Prometheus Collected Metrics
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-env-metrics-metadata
+      path: /api/{env}/metrics/metadata
+      operations:
+      - name: get
+        method: GET
+        description: Apache Dubbo Show Metadata of the Cluster, Like Dubbo Versions, Protocols, Etc.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-env-version
+      path: /api/{env}/version
+      operations:
+      - name: get
+        method: GET
+        description: Apache Dubbo Show Basic Information of the Admin Process
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: admin-metrics-rest
+    port: 8080
+    description: REST adapter for Dubbo-Admin API — metrics. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/api/{env}/metrics/cluster
+      name: api-env-metrics-cluster
+      description: REST surface for api-env-metrics-cluster.
+      operations:
+      - method: GET
+        name: get
+        description: Apache Dubbo Show Cluster Overview
+        call: admin-metrics.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/{env}/metrics/flow
+      name: api-env-metrics-flow
+      description: REST surface for api-env-metrics-flow.
+      operations:
+      - method: GET
+        name: get
+        description: Apache Dubbo Show Prometheus Collected Metrics
+        call: admin-metrics.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/{env}/metrics/metadata
+      name: api-env-metrics-metadata
+      description: REST surface for api-env-metrics-metadata.
+      operations:
+      - method: GET
+        name: get
+        description: Apache Dubbo Show Metadata of the Cluster, Like Dubbo Versions, Protocols, Etc.
+        call: admin-metrics.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/{env}/version
+      name: api-env-version
+      description: REST surface for api-env-version.
+      operations:
+      - method: GET
+        name: get
+        description: Apache Dubbo Show Basic Information of the Admin Process
+        call: admin-metrics.get
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: admin-metrics-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Dubbo-Admin API — metrics. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: apache-dubbo-show-cluster-overview
+      description: Apache Dubbo Show Cluster Overview
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: admin-metrics.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: apache-dubbo-show-prometheus-collected
+      description: Apache Dubbo Show Prometheus Collected Metrics
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: admin-metrics.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: apache-dubbo-show-metadata-cluster
+      description: Apache Dubbo Show Metadata of the Cluster, Like Dubbo Versions, Protocols, Etc.
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: admin-metrics.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: apache-dubbo-show-basic-information
+      description: Apache Dubbo Show Basic Information of the Admin Process
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: admin-metrics.get
+      outputParameters:
+      - type: object
+        mapping: $.

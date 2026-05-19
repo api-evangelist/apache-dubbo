@@ -1,0 +1,182 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Dubbo-Admin API — TrafficGray
+  description: 'Dubbo-Admin API — TrafficGray. 4 operations. Lead operation: Apache Dubbo Get Rule List. Self-contained Naftiko
+    capability covering one Apache Dubbo business surface.'
+  tags:
+  - Apache Dubbo
+  - TrafficGray
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    APACHE_DUBBO_API_KEY: APACHE_DUBBO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: admin-trafficgray
+    baseUri: https://127.0.0.1:38080
+    description: Dubbo-Admin API — TrafficGray business capability. Self-contained, no shared references.
+    resources:
+    - name: api-env-traffic-gray
+      path: /api/{env}/traffic/gray
+      operations:
+      - name: get
+        method: GET
+        description: Apache Dubbo Get Rule List
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: application
+          in: query
+          type: string
+          description: application name
+          required: true
+      - name: put
+        method: PUT
+        description: Apache Dubbo Update Rule
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: gray
+          in: body
+          type: string
+          description: rule
+          required: true
+      - name: post
+        method: POST
+        description: Apache Dubbo Create Rule
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: gray
+          in: body
+          type: string
+          description: rule
+          required: true
+      - name: delete
+        method: DELETE
+        description: Apache Dubbo Delete Rule
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: application
+          in: query
+          type: string
+          description: application name
+          required: true
+  exposes:
+  - type: rest
+    namespace: admin-trafficgray-rest
+    port: 8080
+    description: REST adapter for Dubbo-Admin API — TrafficGray. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/api/{env}/traffic/gray
+      name: api-env-traffic-gray
+      description: REST surface for api-env-traffic-gray.
+      operations:
+      - method: GET
+        name: get
+        description: Apache Dubbo Get Rule List
+        call: admin-trafficgray.get
+        with:
+          application: rest.application
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: put
+        description: Apache Dubbo Update Rule
+        call: admin-trafficgray.put
+        with:
+          gray: rest.gray
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Apache Dubbo Create Rule
+        call: admin-trafficgray.post
+        with:
+          gray: rest.gray
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Apache Dubbo Delete Rule
+        call: admin-trafficgray.delete
+        with:
+          application: rest.application
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: admin-trafficgray-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Dubbo-Admin API — TrafficGray. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: apache-dubbo-get-rule-list
+      description: Apache Dubbo Get Rule List
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: admin-trafficgray.get
+      with:
+        application: tools.application
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: apache-dubbo-update-rule
+      description: Apache Dubbo Update Rule
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: admin-trafficgray.put
+      with:
+        gray: tools.gray
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: apache-dubbo-create-rule
+      description: Apache Dubbo Create Rule
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: admin-trafficgray.post
+      with:
+        gray: tools.gray
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: apache-dubbo-delete-rule
+      description: Apache Dubbo Delete Rule
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: admin-trafficgray.delete
+      with:
+        application: tools.application
+      outputParameters:
+      - type: object
+        mapping: $.

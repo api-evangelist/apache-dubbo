@@ -1,0 +1,183 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Dubbo-Admin API — MockRules
+  description: 'Dubbo-Admin API — MockRules. 3 operations. Lead operation: Apache Dubbo Create or Update MockRule. Self-contained
+    Naftiko capability covering one Apache Dubbo business surface.'
+  tags:
+  - Apache Dubbo
+  - MockRules
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    APACHE_DUBBO_API_KEY: APACHE_DUBBO_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: admin-mockrules
+    baseUri: https://127.0.0.1:38080
+    description: Dubbo-Admin API — MockRules business capability. Self-contained, no shared references.
+    resources:
+    - name: api-env-mock-rule
+      path: /api/{env}/mock/rule
+      operations:
+      - name: post
+        method: POST
+        description: Apache Dubbo Create or Update MockRule
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: env
+          in: path
+          type: string
+          description: environment
+        - name: mockRule
+          in: body
+          type: string
+          description: MockRule
+          required: true
+      - name: delete
+        method: DELETE
+        description: Apache Dubbo Delete MockRule by Id
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: env
+          in: path
+          type: string
+          description: environment
+        - name: mockRule
+          in: body
+          type: string
+          description: MockRule
+          required: true
+    - name: api-env-mock-rule-list
+      path: /api/{env}/mock/rule/list
+      operations:
+      - name: get
+        method: GET
+        description: Apache Dubbo Get MockRules by Page
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: env
+          in: path
+          type: string
+          description: environment
+        - name: filter
+          in: query
+          type: string
+          description: filter condition
+        - name: offset
+          in: query
+          type: integer
+          description: page offset
+        - name: limit
+          in: query
+          type: integer
+          description: page limit
+  exposes:
+  - type: rest
+    namespace: admin-mockrules-rest
+    port: 8080
+    description: REST adapter for Dubbo-Admin API — MockRules. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/api/{env}/mock/rule
+      name: api-env-mock-rule
+      description: REST surface for api-env-mock-rule.
+      operations:
+      - method: POST
+        name: post
+        description: Apache Dubbo Create or Update MockRule
+        call: admin-mockrules.post
+        with:
+          env: rest.env
+          mockRule: rest.mockRule
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Apache Dubbo Delete MockRule by Id
+        call: admin-mockrules.delete
+        with:
+          env: rest.env
+          mockRule: rest.mockRule
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/{env}/mock/rule/list
+      name: api-env-mock-rule-list
+      description: REST surface for api-env-mock-rule-list.
+      operations:
+      - method: GET
+        name: get
+        description: Apache Dubbo Get MockRules by Page
+        call: admin-mockrules.get
+        with:
+          env: rest.env
+          filter: rest.filter
+          offset: rest.offset
+          limit: rest.limit
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: admin-mockrules-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Dubbo-Admin API — MockRules. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: apache-dubbo-create-update-mockrule
+      description: Apache Dubbo Create or Update MockRule
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: admin-mockrules.post
+      with:
+        env: tools.env
+        mockRule: tools.mockRule
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: apache-dubbo-delete-mockrule-id
+      description: Apache Dubbo Delete MockRule by Id
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: admin-mockrules.delete
+      with:
+        env: tools.env
+        mockRule: tools.mockRule
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: apache-dubbo-get-mockrules-page
+      description: Apache Dubbo Get MockRules by Page
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: admin-mockrules.get
+      with:
+        env: tools.env
+        filter: tools.filter
+        offset: tools.offset
+        limit: tools.limit
+      outputParameters:
+      - type: object
+        mapping: $.
