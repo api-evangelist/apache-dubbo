@@ -2,12 +2,20 @@
   "repo": "apache-dubbo",
   "feeds": [
     {
-      "source": "https://dubbo.apache.org/en/blog/",
+      "source": "https://dubbo.apache.org/en/blog/index.xml",
       "feed_url": "https://dubbo.apache.org/en/blog/index.xml",
-      "title": "Apache Dubbo Blog on Apache Dubbo",
-      "saved": 0
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://dubbo.apache.org/en/overview/quickstart/",
+      "feed_url": "https://dubbo.apache.org/en/overview/quickstart/index.xml",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
-  "fetched": "2026-05-17T20:20:35Z",
+  "fetched": "2026-06-01T23:35:02Z",
   "post_count": 0
 }
