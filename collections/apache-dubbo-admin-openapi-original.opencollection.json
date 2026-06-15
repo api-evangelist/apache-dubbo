@@ -1,0 +1,1533 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dubbo-Admin API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Services",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get All Applications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/applications",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Get all applications"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Get All Consumers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/consumers",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Get all consumers"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Search Services by Different Patterns and Keywords",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/service",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "pattern",
+                "value": "",
+                "type": "query",
+                "description": "supported values: application, service or ip"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query",
+                "description": "keyword to search"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "page number"
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "page size"
+              }
+            ]
+          },
+          "docs": "Search services by different patterns and keywords"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show Detail of the Specified Service",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/service/:service",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "service",
+                "value": "",
+                "type": "path",
+                "description": "service format: 'group/service:version'"
+              }
+            ]
+          },
+          "docs": "Show detail of the specified service"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Get All Services",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/services",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Get all services"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "metrics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Show Cluster Overview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/metrics/cluster"
+          },
+          "docs": "show cluster overview"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show Prometheus Collected Metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/metrics/flow"
+          },
+          "docs": "show Prometheus collected metrics"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show Metadata of the Cluster, Like Dubbo Versions, Protocols, Etc.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/metrics/metadata"
+          },
+          "docs": "show metadata of the cluster, like dubbo versions, protocols, etc."
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show Basic Information of the Admin Process",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/version"
+          },
+          "docs": "show basic information of the Admin process"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "MockRules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Create or Update MockRule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/mock/rule",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Create or update MockRule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete MockRule by Id",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/mock/rule",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Delete MockRule by id"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Get MockRules by Page",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/mock/rule/list",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query",
+                "description": "filter condition"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "page offset"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "page limit"
+              }
+            ]
+          },
+          "docs": "Get MockRules by page"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "OverrideRule",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Search Override Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/override",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application and service must not left empty at the same time"
+              },
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "application and service must not left empty at the same time"
+              },
+              {
+                "name": "serviceVersion",
+                "value": "",
+                "type": "query",
+                "description": "version of dubbo service"
+              },
+              {
+                "name": "serviceGroup",
+                "value": "",
+                "type": "query",
+                "description": "group of dubbo service"
+              }
+            ]
+          },
+          "docs": "Search override rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create a New Override Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/override",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Create a new override rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Disable the Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/override/disable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Disable the specified rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Enable the Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/override/enable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Enable the specified rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show the Detail of One Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/override/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Show the detail of one specified rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Override Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/override/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Override Rule Id"
+              }
+            ]
+          },
+          "docs": "Update override rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete the Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/rules/override/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Delete the specified rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "ConditionRule",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Search Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application and service must not left empty at the same time"
+              },
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "application and service must not left empty at the same time"
+              },
+              {
+                "name": "serviceVersion",
+                "value": "",
+                "type": "query",
+                "description": "version of dubbo service"
+              },
+              {
+                "name": "serviceGroup",
+                "value": "",
+                "type": "query",
+                "description": "group of dubbo service"
+              }
+            ]
+          },
+          "docs": "Search condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create a New Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Create a new condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Disable the Specified Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/disable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Disable the specified condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Enable the Specified Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/enable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Enable the specified condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show the Detail of One Specified Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Show the detail of one specified condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Update condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete the Specified Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Delete the specified condition rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TagRule",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Search Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/route/tag",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application and service must not left empty at the same time"
+              }
+            ]
+          },
+          "docs": "Search rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create a New Tag Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/route/tag",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Create a new tag rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Disable the Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/route/tag/disable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Disable the specified rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Enable the Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/route/tag/enable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Enable the specified rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show the Detail of One Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/route/tag/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Show the detail of one specified rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/route/tag/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Update rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete the Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/rules/route/tag/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Delete the specified rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TrafficAccesslog",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/accesslog",
+            "params": [
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application name"
+              }
+            ]
+          },
+          "docs": "get rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/accesslog"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/accesslog"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/accesslog",
+            "params": [
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application name"
+              }
+            ]
+          },
+          "docs": "delete rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TrafficArgument",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/argument",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "get rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/argument"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/argument"
+          },
+          "docs": "update rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/argument",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "delete rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TrafficGray",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/gray",
+            "params": [
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application name"
+              }
+            ]
+          },
+          "docs": "get rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/gray"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/gray"
+          },
+          "docs": "update rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/gray",
+            "params": [
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application name"
+              }
+            ]
+          },
+          "docs": "delete rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TrafficMock",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/mock",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "get rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/mock"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/mock"
+          },
+          "docs": "update rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/mock",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "delete rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TrafficRegion",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/region",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "get rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/region"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/region"
+          },
+          "docs": "update rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/region",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "delete rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TrafficRetry",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/retry",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "get rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/retry"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/retry"
+          },
+          "docs": "update rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/retry",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "delete rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TrafficTimeout",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Timeout Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/timeout",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "get timeout rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create a New Timeout Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/timeout"
+          },
+          "docs": "Create a new timeout rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update a New Timeout Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/timeout"
+          },
+          "docs": "update a new timeout rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete a New Timeout Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/timeout",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "delete a new timeout rule"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TrafficWeight",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/weight",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "get rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/weight"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/weight"
+          },
+          "docs": "update rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/weight",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "delete rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
