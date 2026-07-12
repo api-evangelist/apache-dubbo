@@ -76,6 +76,10 @@ apis:
       - type: GitHubRepository
         url: https://github.com/apache/dubbo-go
 common:
+  - type: VulnerabilityDisclosure
+    url: security/apache-dubbo-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/apache-dubbo-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/apache
     title: Apache GitHub Organization
