@@ -76,6 +76,8 @@ apis:
       - type: GitHubRepository
         url: https://github.com/apache/dubbo-go
 common:
+  - type: AgenticAccess
+    url: agentic-access/apache-dubbo-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/apache-dubbo-vulnerability-disclosure.yml
   - type: DomainSecurity
