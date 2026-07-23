@@ -1,0 +1,211 @@
+swagger: '2.0'
+info:
+  description: This is a dubbo-admin swagger ui server.
+  title: Dubbo-Admin ConditionRule TrafficWeight API
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: '1.0'
+host: 127.0.0.1:38080
+basePath: /
+tags:
+- name: TrafficWeight
+paths:
+  /api/{env}/traffic/weight:
+    get:
+      description: get rule list
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficWeight
+      summary: Apache Dubbo Get Rule List
+      parameters:
+      - type: string
+        description: service name
+        name: service
+        in: query
+        required: true
+      - type: string
+        description: service version
+        name: version
+        in: query
+        required: true
+      - type: string
+        description: service group
+        name: group
+        in: query
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/model.Weight'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    put:
+      description: update rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficWeight
+      summary: Apache Dubbo Update Rule
+      parameters:
+      - description: rule
+        name: weight
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.Weight'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: bool
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    post:
+      description: create rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficWeight
+      summary: Apache Dubbo Create Rule
+      parameters:
+      - description: rule
+        name: weight
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.Weight'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: bool
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    delete:
+      description: delete rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficWeight
+      summary: Apache Dubbo Delete Rule
+      parameters:
+      - type: string
+        description: service name
+        name: service
+        in: query
+        required: true
+      - type: string
+        description: service version
+        name: version
+        in: query
+        required: true
+      - type: string
+        description: service group
+        name: group
+        in: query
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: bool
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+definitions:
+  model.StringMatch:
+    type: object
+    properties:
+      empty:
+        type: string
+      exact:
+        type: string
+      noempty:
+        type: string
+      prefix:
+        type: string
+      regex:
+        type: string
+      wildcard:
+        type: string
+  model.ParamMatch:
+    type: object
+    properties:
+      key:
+        type: string
+      value:
+        $ref: '#/definitions/model.StringMatch'
+  model.ConditionMatch:
+    type: object
+    properties:
+      address:
+        $ref: '#/definitions/model.AddressMatch'
+      application:
+        $ref: '#/definitions/model.ListStringMatch'
+      param:
+        type: array
+        items:
+          $ref: '#/definitions/model.ParamMatch'
+      service:
+        $ref: '#/definitions/model.ListStringMatch'
+  model.AddressMatch:
+    type: object
+    properties:
+      cird:
+        type: string
+      exact:
+        type: string
+      wildcard:
+        type: string
+  model.ListStringMatch:
+    type: object
+    properties:
+      oneof:
+        type: array
+        items:
+          $ref: '#/definitions/model.StringMatch'
+  model.HTTPError:
+    type: object
+    properties:
+      error:
+        description: error message
+        type: string
+  model.Weight:
+    type: object
+    required:
+    - match
+    - weight
+    properties:
+      match:
+        $ref: '#/definitions/model.ConditionMatch'
+      weight:
+        type: integer

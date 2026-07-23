@@ -1,0 +1,164 @@
+swagger: '2.0'
+info:
+  description: This is a dubbo-admin swagger ui server.
+  title: Dubbo-Admin ConditionRule TrafficTimeout API
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: '1.0'
+host: 127.0.0.1:38080
+basePath: /
+tags:
+- name: TrafficTimeout
+paths:
+  /api/{env}/traffic/timeout:
+    get:
+      description: get timeout rule list
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficTimeout
+      summary: Apache Dubbo Get Timeout Rule List
+      parameters:
+      - type: string
+        description: service name
+        name: service
+        in: query
+        required: true
+      - type: string
+        description: service version
+        name: version
+        in: query
+        required: true
+      - type: string
+        description: service group
+        name: group
+        in: query
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/model.Timeout'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    put:
+      description: update a new timeout rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficTimeout
+      summary: Apache Dubbo Update a New Timeout Rule
+      parameters:
+      - description: timeout rule
+        name: timeout
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.Timeout'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    post:
+      description: Create a new timeout rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficTimeout
+      summary: Apache Dubbo Create a New Timeout Rule
+      parameters:
+      - description: timeout rule
+        name: timeout
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.Timeout'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    delete:
+      description: delete a new timeout rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficTimeout
+      summary: Apache Dubbo Delete a New Timeout Rule
+      parameters:
+      - type: string
+        description: service name
+        name: service
+        in: query
+        required: true
+      - type: string
+        description: service version
+        name: version
+        in: query
+        required: true
+      - type: string
+        description: service group
+        name: group
+        in: query
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+definitions:
+  model.HTTPError:
+    type: object
+    properties:
+      error:
+        description: error message
+        type: string
+  model.Timeout:
+    type: object
+    required:
+    - service
+    - timeout
+    properties:
+      group:
+        type: string
+      service:
+        type: string
+      timeout:
+        type: integer
+      version:
+        type: string

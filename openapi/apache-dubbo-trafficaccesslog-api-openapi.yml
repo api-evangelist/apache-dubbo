@@ -1,0 +1,140 @@
+swagger: '2.0'
+info:
+  description: This is a dubbo-admin swagger ui server.
+  title: Dubbo-Admin ConditionRule TrafficAccesslog API
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: '1.0'
+host: 127.0.0.1:38080
+basePath: /
+tags:
+- name: TrafficAccesslog
+paths:
+  /api/{env}/traffic/accesslog:
+    get:
+      description: get rule list
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficAccesslog
+      summary: Apache Dubbo Get Rule List
+      parameters:
+      - type: string
+        description: application name
+        name: application
+        in: query
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/model.Accesslog'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    put:
+      description: create rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficAccesslog
+      summary: Apache Dubbo Create Rule
+      parameters:
+      - description: rule
+        name: accesslog
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.Accesslog'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: bool
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    post:
+      description: create rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficAccesslog
+      summary: Apache Dubbo Create Rule
+      parameters:
+      - description: rule
+        name: accesslog
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.Accesslog'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: bool
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    delete:
+      description: delete rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - TrafficAccesslog
+      summary: Apache Dubbo Delete Rule
+      parameters:
+      - type: string
+        description: application name
+        name: application
+        in: query
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: bool
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+definitions:
+  model.Accesslog:
+    type: object
+    required:
+    - accesslog
+    - application
+    properties:
+      accesslog:
+        type: string
+      application:
+        type: string
+  model.HTTPError:
+    type: object
+    properties:
+      error:
+        description: error message
+        type: string

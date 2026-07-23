@@ -1,0 +1,143 @@
+swagger: '2.0'
+info:
+  description: This is a dubbo-admin swagger ui server.
+  title: Dubbo-Admin ConditionRule metrics API
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: '1.0'
+host: 127.0.0.1:38080
+basePath: /
+tags:
+- name: metrics
+paths:
+  /api/{env}/metrics/cluster:
+    get:
+      description: show cluster overview
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - metrics
+      summary: Apache Dubbo Show Cluster Overview
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/model.ClusterMetricsRes'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+  /api/{env}/metrics/flow:
+    get:
+      description: show Prometheus collected metrics
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - metrics
+      summary: Apache Dubbo Show Prometheus Collected Metrics
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/model.FlowMetricsRes'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+  /api/{env}/metrics/metadata:
+    get:
+      description: show metadata of the cluster, like dubbo versions, protocols, etc.
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - metrics
+      summary: Apache Dubbo Show Metadata of the Cluster, Like Dubbo Versions, Protocols, Etc.
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Metadata'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+  /api/{env}/version:
+    get:
+      description: show basic information of the Admin process
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - metrics
+      summary: Apache Dubbo Show Basic Information of the Admin Process
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/version.Version'
+definitions:
+  model.FlowMetricsRes:
+    type: object
+    properties:
+      data:
+        type: object
+        additionalProperties:
+          type: number
+  model.ClusterMetricsRes:
+    type: object
+    properties:
+      data:
+        type: object
+        additionalProperties:
+          type: integer
+  version.Version:
+    type: object
+    properties:
+      buildDate:
+        type: string
+      compiler:
+        type: string
+      gitCommit:
+        type: string
+      gitTreeState:
+        type: string
+      gitVersion:
+        type: string
+      goVersion:
+        type: string
+      platform:
+        type: string
+  model.HTTPError:
+    type: object
+    properties:
+      error:
+        description: error message
+        type: string
+  model.Metadata:
+    type: object
+    properties:
+      configCenter:
+        type: string
+      metadataCenter:
+        type: string
+      protocols:
+        type: array
+        items: {}
+      registry:
+        type: string
+      rules:
+        type: array
+        items:
+          type: string
+      versions:
+        type: array
+        items: {}

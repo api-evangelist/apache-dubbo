@@ -1,0 +1,366 @@
+swagger: '2.0'
+info:
+  description: This is a dubbo-admin swagger ui server.
+  title: Dubbo-Admin ConditionRule OverrideRule API
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: '1.0'
+host: 127.0.0.1:38080
+basePath: /
+tags:
+- name: OverrideRule
+paths:
+  /api/{env}/rules/override:
+    get:
+      description: Search override rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - OverrideRule
+      summary: Apache Dubbo Search Override Rule
+      parameters:
+      - type: string
+        default: dev
+        description: environment
+        name: env
+        in: path
+      - type: string
+        description: application and service must not left empty at the same time
+        name: application
+        in: query
+      - type: string
+        description: application and service must not left empty at the same time
+        name: service
+        in: query
+      - type: string
+        description: version of dubbo service
+        name: serviceVersion
+        in: query
+      - type: string
+        description: group of dubbo service
+        name: serviceGroup
+        in: query
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/model.DynamicConfig'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    post:
+      description: Create a new override rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - OverrideRule
+      summary: Apache Dubbo Create a New Override Rule
+      parameters:
+      - type: string
+        default: dev
+        description: environment
+        name: env
+        in: path
+      - description: Override Rule Input
+        name: dynamicConfig
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.DynamicConfig'
+      responses:
+        '201':
+          description: Created
+          schema:
+            type: boolean
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+  /api/{env}/rules/override/disable/{id}:
+    put:
+      description: Disable the specified rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - OverrideRule
+      summary: Apache Dubbo Disable the Specified Rule
+      parameters:
+      - type: string
+        default: dev
+        description: environment
+        name: env
+        in: path
+      - type: string
+        description: rule id
+        name: id
+        in: path
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+  /api/{env}/rules/override/enable/{id}:
+    put:
+      description: Enable the specified rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - OverrideRule
+      summary: Apache Dubbo Enable the Specified Rule
+      parameters:
+      - type: string
+        default: dev
+        description: environment
+        name: env
+        in: path
+      - type: string
+        description: rule id
+        name: id
+        in: path
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+  /api/{env}/rules/override/{id}:
+    get:
+      description: Show the detail of one specified rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - OverrideRule
+      summary: Apache Dubbo Show the Detail of One Specified Rule
+      parameters:
+      - type: string
+        default: dev
+        description: environment
+        name: env
+        in: path
+      - type: string
+        description: rule id
+        name: id
+        in: path
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/model.DynamicConfig'
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    post:
+      description: Update override rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - OverrideRule
+      summary: Apache Dubbo Update Override Rule
+      parameters:
+      - type: string
+        default: dev
+        description: environment
+        name: env
+        in: path
+      - type: string
+        description: Override Rule Id
+        name: id
+        in: path
+        required: true
+      - description: Override Rule Input
+        name: dynamicConfig
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/model.DynamicConfig'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+        '400':
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+    delete:
+      description: Delete the specified rule
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      tags:
+      - OverrideRule
+      summary: Apache Dubbo Delete the Specified Rule
+      parameters:
+      - type: string
+        default: dev
+        description: environment
+        name: env
+        in: path
+      - type: string
+        description: rule id
+        name: id
+        in: path
+        required: true
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+        '500':
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/model.HTTPError'
+definitions:
+  model.OverrideConfig:
+    type: object
+    properties:
+      addresses:
+        type: array
+        items:
+          type: string
+      applications:
+        type: array
+        items:
+          type: string
+      enabled:
+        type: boolean
+      match:
+        $ref: '#/definitions/model.ConditionMatch'
+      parameters:
+        type: object
+        additionalProperties: true
+      providerAddresses:
+        type: array
+        items:
+          type: string
+      services:
+        type: array
+        items:
+          type: string
+      side:
+        type: string
+      type:
+        type: string
+  model.StringMatch:
+    type: object
+    properties:
+      empty:
+        type: string
+      exact:
+        type: string
+      noempty:
+        type: string
+      prefix:
+        type: string
+      regex:
+        type: string
+      wildcard:
+        type: string
+  model.ConditionMatch:
+    type: object
+    properties:
+      address:
+        $ref: '#/definitions/model.AddressMatch'
+      application:
+        $ref: '#/definitions/model.ListStringMatch'
+      param:
+        type: array
+        items:
+          $ref: '#/definitions/model.ParamMatch'
+      service:
+        $ref: '#/definitions/model.ListStringMatch'
+  model.DynamicConfig:
+    type: object
+    properties:
+      application:
+        type: string
+      configVersion:
+        type: string
+      configs:
+        type: array
+        items:
+          $ref: '#/definitions/model.OverrideConfig'
+      enabled:
+        type: boolean
+      id:
+        type: string
+      service:
+        type: string
+      serviceGroup:
+        type: string
+      serviceVersion:
+        type: string
+  model.ParamMatch:
+    type: object
+    properties:
+      key:
+        type: string
+      value:
+        $ref: '#/definitions/model.StringMatch'
+  model.HTTPError:
+    type: object
+    properties:
+      error:
+        description: error message
+        type: string
+  model.AddressMatch:
+    type: object
+    properties:
+      cird:
+        type: string
+      exact:
+        type: string
+      wildcard:
+        type: string
+  model.ListStringMatch:
+    type: object
+    properties:
+      oneof:
+        type: array
+        items:
+          $ref: '#/definitions/model.StringMatch'
