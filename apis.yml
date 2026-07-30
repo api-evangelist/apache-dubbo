@@ -5,9 +5,21 @@ description: >-
   management, and observability capabilities for building enterprise-level microservices. It supports multiple protocols
   including Triple (gRPC-compatible), Dubbo, and REST, with SDKs for Java, Go, Node.js, Python, Rust, and Erlang.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-dubbo.png
 tags:
   - Apache
   - Go
@@ -22,59 +34,223 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: apache-dubbo:apache-dubbo-admin
-    name: Apache Dubbo Admin API
-    description: >-
-      The Dubbo Admin REST API provides service governance operations for managing services, instances, traffic rules,
-      load balancing, route policies, and dynamic configuration in a Dubbo microservices cluster.
-    humanURL: https://github.com/apache/dubbo-admin
-    tags:
-      - Admin
-      - Governance
-      - REST
-      - Service Management
-    properties:
-      - type: Documentation
-        url: https://dubbo.apache.org/en/overview/reference/admin/
-      - type: OpenAPI
-        url: openapi/apache-dubbo-admin-openapi-original.json
-      - type: GitHubRepository
-        url: https://github.com/apache/dubbo-admin
-  - aid: apache-dubbo:apache-dubbo-java
-    name: Apache Dubbo Java SDK
-    description: >-
-      The core Apache Dubbo Java framework providing RPC service definition, publishing, invocation, and service
-      governance APIs for building enterprise microservices in Java and Spring Boot.
-    humanURL: https://dubbo.apache.org/en/overview/mannual/java-sdk/
-    tags:
-      - Java
-      - RPC
-      - SDK
-      - Spring Boot
-    properties:
-      - type: Documentation
-        url: https://dubbo.apache.org/en/overview/mannual/java-sdk/
-      - type: SDKs
-        url: https://search.maven.org/artifact/org.apache.dubbo/dubbo
-        title: Java SDK (Maven Central)
-      - type: GitHubRepository
-        url: https://github.com/apache/dubbo
-  - aid: apache-dubbo:apache-dubbo-go
-    name: Apache Dubbo Go SDK
-    description: >-
-      The Go implementation of Apache Dubbo, providing the same RPC framework capabilities including service discovery,
-      traffic management, and Triple protocol support for Go-based microservices.
-    humanURL: https://dubbo.apache.org/en/overview/mannual/golang-sdk/
-    tags:
-      - Go
-      - Golang
-      - RPC
-      - SDK
-    properties:
-      - type: Documentation
-        url: https://dubbo.apache.org/en/overview/mannual/golang-sdk/
-      - type: GitHubRepository
-        url: https://github.com/apache/dubbo-go
+- aid: apache-dubbo:apache-dubbo-java
+  name: Apache Dubbo Java SDK
+  description: >-
+    The core Apache Dubbo Java framework providing RPC service definition, publishing, invocation, and
+    service governance APIs for building enterprise microservices in Java and Spring Boot.
+  humanURL: https://dubbo.apache.org/en/overview/mannual/java-sdk/
+  tags:
+  - Java
+  - RPC
+  - SDK
+  - Spring Boot
+  properties:
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/mannual/java-sdk/
+  - type: SDKs
+    url: https://search.maven.org/artifact/org.apache.dubbo/dubbo
+    title: Java SDK (Maven Central)
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo
+- aid: apache-dubbo:apache-dubbo-go
+  name: Apache Dubbo Go SDK
+  description: >-
+    The Go implementation of Apache Dubbo, providing the same RPC framework capabilities including service
+    discovery, traffic management, and Triple protocol support for Go-based microservices.
+  humanURL: https://dubbo.apache.org/en/overview/mannual/golang-sdk/
+  tags:
+  - Go
+  - Golang
+  - RPC
+  - SDK
+  properties:
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/mannual/golang-sdk/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-go
+- aid: apache-dubbo:apache-dubbo-conditionrule-api
+  name: Apache Dubbo ConditionRule API
+  description: The ConditionRule API from Apache Dubbo — 4 operation(s) for conditionrule.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - ConditionRule
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-conditionrule-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-metrics-api
+  name: Apache Dubbo metrics API
+  description: The metrics API from Apache Dubbo — 4 operation(s) for metrics.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - metrics
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-metrics-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-mockrules-api
+  name: Apache Dubbo MockRules API
+  description: The MockRules API from Apache Dubbo — 2 operation(s) for mockrules.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - MockRules
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-mockrules-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-overriderule-api
+  name: Apache Dubbo OverrideRule API
+  description: The OverrideRule API from Apache Dubbo — 4 operation(s) for overriderule.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - OverrideRule
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-overriderule-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-services-api
+  name: Apache Dubbo Services API
+  description: The Services API from Apache Dubbo — 5 operation(s) for services.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - Services
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-services-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-tagrule-api
+  name: Apache Dubbo TagRule API
+  description: The TagRule API from Apache Dubbo — 4 operation(s) for tagrule.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - TagRule
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-tagrule-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-trafficaccesslog-api
+  name: Apache Dubbo TrafficAccesslog API
+  description: The TrafficAccesslog API from Apache Dubbo — 1 operation(s) for trafficaccesslog.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - TrafficAccesslog
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-trafficaccesslog-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-trafficargument-api
+  name: Apache Dubbo TrafficArgument API
+  description: The TrafficArgument API from Apache Dubbo — 1 operation(s) for trafficargument.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - TrafficArgument
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-trafficargument-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-trafficgray-api
+  name: Apache Dubbo TrafficGray API
+  description: The TrafficGray API from Apache Dubbo — 1 operation(s) for trafficgray.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - TrafficGray
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-trafficgray-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-trafficmock-api
+  name: Apache Dubbo TrafficMock API
+  description: The TrafficMock API from Apache Dubbo — 1 operation(s) for trafficmock.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - TrafficMock
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-trafficmock-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-trafficregion-api
+  name: Apache Dubbo TrafficRegion API
+  description: The TrafficRegion API from Apache Dubbo — 1 operation(s) for trafficregion.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - TrafficRegion
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-trafficregion-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-trafficretry-api
+  name: Apache Dubbo TrafficRetry API
+  description: The TrafficRetry API from Apache Dubbo — 1 operation(s) for trafficretry.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - TrafficRetry
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-trafficretry-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-traffictimeout-api
+  name: Apache Dubbo TrafficTimeout API
+  description: The TrafficTimeout API from Apache Dubbo — 1 operation(s) for traffictimeout.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - TrafficTimeout
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-traffictimeout-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-trafficweight-api
+  name: Apache Dubbo TrafficWeight API
+  description: The TrafficWeight API from Apache Dubbo — 1 operation(s) for trafficweight.
+  humanURL: https://github.com/apache/dubbo-admin
+  tags:
+  - TrafficWeight
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-trafficweight-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
 common:
   - type: AgenticAccess
     url: agentic-access/apache-dubbo-agentic-access.yml
