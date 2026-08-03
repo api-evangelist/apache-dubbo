@@ -1,0 +1,40 @@
+{
+  "provider": "apache-dubbo",
+  "sources": [
+    "apache-dubbo-conditionrule-api-openapi.yml",
+    "apache-dubbo-metrics-api-openapi.yml",
+    "apache-dubbo-mockrules-api-openapi.yml",
+    "apache-dubbo-overriderule-api-openapi.yml",
+    "apache-dubbo-services-api-openapi.yml",
+    "apache-dubbo-tagrule-api-openapi.yml",
+    "apache-dubbo-trafficaccesslog-api-openapi.yml",
+    "apache-dubbo-trafficargument-api-openapi.yml",
+    "apache-dubbo-trafficgray-api-openapi.yml",
+    "apache-dubbo-trafficmock-api-openapi.yml",
+    "apache-dubbo-trafficregion-api-openapi.yml",
+    "apache-dubbo-trafficretry-api-openapi.yml",
+    "apache-dubbo-traffictimeout-api-openapi.yml",
+    "apache-dubbo-trafficweight-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-dubbo-conditionrule-api-openapi.yml",
+    "apache-dubbo-metrics-api-openapi.yml",
+    "apache-dubbo-mockrules-api-openapi.yml",
+    "apache-dubbo-overriderule-api-openapi.yml",
+    "apache-dubbo-services-api-openapi.yml",
+    "apache-dubbo-tagrule-api-openapi.yml",
+    "apache-dubbo-trafficaccesslog-api-openapi.yml",
+    "apache-dubbo-trafficargument-api-openapi.yml",
+    "apache-dubbo-trafficgray-api-openapi.yml",
+    "apache-dubbo-trafficmock-api-openapi.yml",
+    "apache-dubbo-trafficregion-api-openapi.yml",
+    "apache-dubbo-trafficretry-api-openapi.yml",
+    "apache-dubbo-traffictimeout-api-openapi.yml",
+    "apache-dubbo-trafficweight-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
