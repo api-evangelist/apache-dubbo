@@ -252,6 +252,17 @@ apis:
   - type: GitHubRepository
     url: https://github.com/apache/dubbo-admin
 common:
+  - type: IssueTracker
+    url: https://github.com/apache/dubbo/issues
+  - type: SecurityPolicy
+    url: https://github.com/apache/dubbo/blob/3.3/SECURITY.md
+  - type: CodeOfConduct
+    url: https://github.com/apache/dubbo/blob/3.3/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/apache/dubbo/blob/3.3/CONTRIBUTING.md
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/apache/dubbo/blob/3.3/LICENSE
   - type: AgenticAccess
     url: agentic-access/apache-dubbo-agentic-access.yml
   - type: VulnerabilityDisclosure
