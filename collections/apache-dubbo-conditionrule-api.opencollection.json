@@ -1,0 +1,205 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dubbo-Admin ConditionRule API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ConditionRule",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Search Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application and service must not left empty at the same time"
+              },
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "application and service must not left empty at the same time"
+              },
+              {
+                "name": "serviceVersion",
+                "value": "",
+                "type": "query",
+                "description": "version of dubbo service"
+              },
+              {
+                "name": "serviceGroup",
+                "value": "",
+                "type": "query",
+                "description": "group of dubbo service"
+              }
+            ]
+          },
+          "docs": "Search condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create a New Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Create a new condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Disable the Specified Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/disable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Disable the specified condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Enable the Specified Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/enable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Enable the specified condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show the Detail of One Specified Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Show the detail of one specified condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Update condition rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete the Specified Condition Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/rules/route/condition/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Condition Rule Id"
+              }
+            ]
+          },
+          "docs": "Delete the specified condition rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

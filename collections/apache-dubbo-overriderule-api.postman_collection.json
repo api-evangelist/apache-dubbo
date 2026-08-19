@@ -1,0 +1,1426 @@
+{
+  "item": [
+    {
+      "id": "fe4fcc67-86ec-49b5-823e-7045011a4b9d",
+      "name": "OverrideRule",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f8e479c1-6403-449e-9883-2ffba030f405",
+          "name": "Apache Dubbo Search Override Rule",
+          "request": {
+            "name": "Apache Dubbo Search Override Rule",
+            "description": {
+              "content": "Search override rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "override"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "application",
+                  "value": "<string>",
+                  "description": "application and service must not left empty at the same time"
+                },
+                {
+                  "disabled": false,
+                  "key": "service",
+                  "value": "<string>",
+                  "description": "application and service must not left empty at the same time"
+                },
+                {
+                  "disabled": false,
+                  "key": "serviceVersion",
+                  "value": "<string>",
+                  "description": "version of dubbo service"
+                },
+                {
+                  "disabled": false,
+                  "key": "serviceGroup",
+                  "value": "<string>",
+                  "description": "group of dubbo service"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "392fe29b-f7d0-40a4-a334-8abe6d8b8508",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "application",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "service",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceGroup",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"application\": \"string\",\n    \"configVersion\": \"string\",\n    \"configs\": [\n      {\n        \"addresses\": [\n          \"string\",\n          \"string\"\n        ],\n        \"applications\": [\n          \"string\",\n          \"string\"\n        ],\n        \"enabled\": false,\n        \"match\": {\n          \"address\": {\n            \"cird\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"application\": {\n            \"oneof\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"param\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"service\": {\n            \"oneof\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"parameters\": {\n          \"key_0\": 2972.628569625767,\n          \"key_1\": \"string\",\n          \"key_2\": 627.5534782764114\n        },\n        \"providerAddresses\": [\n          \"string\",\n          \"string\"\n        ],\n        \"services\": [\n          \"string\",\n          \"string\"\n        ],\n        \"side\": \"string\",\n        \"type\": \"string\"\n      },\n      {\n        \"addresses\": [\n          \"string\",\n          \"string\"\n        ],\n        \"applications\": [\n          \"string\",\n          \"string\"\n        ],\n        \"enabled\": false,\n        \"match\": {\n          \"address\": {\n            \"cird\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"application\": {\n            \"oneof\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"param\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"service\": {\n            \"oneof\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"parameters\": {\n          \"key_0\": 3449,\n          \"key_1\": 5514.172838034143\n        },\n        \"providerAddresses\": [\n          \"string\",\n          \"string\"\n        ],\n        \"services\": [\n          \"string\",\n          \"string\"\n        ],\n        \"side\": \"string\",\n        \"type\": \"string\"\n      }\n    ],\n    \"enabled\": true,\n    \"id\": \"string\",\n    \"service\": \"string\",\n    \"serviceGroup\": \"string\",\n    \"serviceVersion\": \"string\"\n  },\n  {\n    \"application\": \"string\",\n    \"configVersion\": \"string\",\n    \"configs\": [\n      {\n        \"addresses\": [\n          \"string\",\n          \"string\"\n        ],\n        \"applications\": [\n          \"string\",\n          \"string\"\n        ],\n        \"enabled\": false,\n        \"match\": {\n          \"address\": {\n            \"cird\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"application\": {\n            \"oneof\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"param\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"service\": {\n            \"oneof\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"parameters\": {\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": 3065.7817900038863\n        },\n        \"providerAddresses\": [\n          \"string\",\n          \"string\"\n        ],\n        \"services\": [\n          \"string\",\n          \"string\"\n        ],\n        \"side\": \"string\",\n        \"type\": \"string\"\n      },\n      {\n        \"addresses\": [\n          \"string\",\n          \"string\"\n        ],\n        \"applications\": [\n          \"string\",\n          \"string\"\n        ],\n        \"enabled\": true,\n        \"match\": {\n          \"address\": {\n            \"cird\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"application\": {\n            \"oneof\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"param\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ],\n          \"service\": {\n            \"oneof\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"parameters\": {\n          \"key_0\": \"string\"\n        },\n        \"providerAddresses\": [\n          \"string\",\n          \"string\"\n        ],\n        \"services\": [\n          \"string\",\n          \"string\"\n        ],\n        \"side\": \"string\",\n        \"type\": \"string\"\n      }\n    ],\n    \"enabled\": false,\n    \"id\": \"string\",\n    \"service\": \"string\",\n    \"serviceGroup\": \"string\",\n    \"serviceVersion\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "54038840-4de7-45af-bee1-6c975242f9cd",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "application",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "service",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceGroup",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "487b4058-670c-4829-ae15-0530cfcd8fb7",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "application",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "service",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "serviceGroup",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4f72274e-f253-4a80-bf5d-8178eda6330e",
+          "name": "Apache Dubbo Create a New Override Rule",
+          "request": {
+            "name": "Apache Dubbo Create a New Override Rule",
+            "description": {
+              "content": "Create a new override rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "override"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"application\": \"<string>\",\n  \"configVersion\": \"<string>\",\n  \"configs\": [\n    {\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"applications\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"enabled\": \"<boolean>\",\n      \"match\": {\n        \"address\": {\n          \"cird\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        \"application\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"param\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"service\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      \"parameters\": {\n        \"key_0\": \"string\",\n        \"key_1\": 9711.06984657073,\n        \"key_2\": true\n      },\n      \"providerAddresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"services\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"side\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"applications\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"enabled\": \"<boolean>\",\n      \"match\": {\n        \"address\": {\n          \"cird\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        \"application\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"param\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"service\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      \"parameters\": {\n        \"key_0\": 2256,\n        \"key_1\": \"string\"\n      },\n      \"providerAddresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"services\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"side\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"id\": \"<string>\",\n  \"service\": \"<string>\",\n  \"serviceGroup\": \"<string>\",\n  \"serviceVersion\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "78a281a5-3503-47cc-a907-3ec97f7ae846",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3fc1a925-b732-427b-8374-2db4c5ebb7e4",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "667f2115-74c1-4b0b-b1d8-87979682485b",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c02448ad-8cce-41e0-8c8e-eeac57a06bce",
+          "name": "Apache Dubbo Disable the Specified Rule",
+          "request": {
+            "name": "Apache Dubbo Disable the Specified Rule",
+            "description": {
+              "content": "Disable the specified rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "override",
+                "disable",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) rule id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ae1d8fc5-d8e7-4e24-8749-a61c60b941d9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    "disable",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c5e4e7b0-4787-4b5f-8657-49b54a0f8d9c",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    "disable",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8cc251ae-f25d-4cf0-9346-e31323a1c908",
+          "name": "Apache Dubbo Enable the Specified Rule",
+          "request": {
+            "name": "Apache Dubbo Enable the Specified Rule",
+            "description": {
+              "content": "Enable the specified rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "override",
+                "enable",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) rule id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fcd692c0-07b8-4591-ae97-c238da33416d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    "enable",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fca9f08e-e0a4-4a53-9fb2-7a26b3606791",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    "enable",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "10ad2d10-4b2a-4748-b9ea-938385ecaf43",
+          "name": "Apache Dubbo Show the Detail of One Specified Rule",
+          "request": {
+            "name": "Apache Dubbo Show the Detail of One Specified Rule",
+            "description": {
+              "content": "Show the detail of one specified rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "override",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) rule id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5e788aad-d3ec-487b-be93-a92709c1bf34",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"application\": \"<string>\",\n  \"configVersion\": \"<string>\",\n  \"configs\": [\n    {\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"applications\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"enabled\": \"<boolean>\",\n      \"match\": {\n        \"address\": {\n          \"cird\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        \"application\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"param\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"service\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      \"parameters\": {\n        \"key_0\": 403.59681652802794,\n        \"key_1\": true\n      },\n      \"providerAddresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"services\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"side\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"applications\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"enabled\": \"<boolean>\",\n      \"match\": {\n        \"address\": {\n          \"cird\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        \"application\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"param\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"service\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      \"parameters\": {\n        \"key_0\": 9595.930262096506,\n        \"key_1\": true,\n        \"key_2\": true\n      },\n      \"providerAddresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"services\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"side\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"id\": \"<string>\",\n  \"service\": \"<string>\",\n  \"serviceGroup\": \"<string>\",\n  \"serviceVersion\": \"<string>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bc149ed2-c37a-4bf6-aae4-c89ec73fc23c",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9c476f42-4b57-4631-ac1c-80da0936dc96",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5bbe2c33-5477-4a1b-81b5-5685aff01be6",
+          "name": "Apache Dubbo Update Override Rule",
+          "request": {
+            "name": "Apache Dubbo Update Override Rule",
+            "description": {
+              "content": "Update override rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "override",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Override Rule Id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"application\": \"<string>\",\n  \"configVersion\": \"<string>\",\n  \"configs\": [\n    {\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"applications\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"enabled\": \"<boolean>\",\n      \"match\": {\n        \"address\": {\n          \"cird\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        \"application\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"param\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"service\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      \"parameters\": {\n        \"key_0\": false,\n        \"key_1\": 3626,\n        \"key_2\": \"string\",\n        \"key_3\": 9218.639520667193\n      },\n      \"providerAddresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"services\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"side\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"applications\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"enabled\": \"<boolean>\",\n      \"match\": {\n        \"address\": {\n          \"cird\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        \"application\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"param\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"service\": {\n          \"oneof\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      \"parameters\": {\n        \"key_0\": \"string\"\n      },\n      \"providerAddresses\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"services\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"side\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"id\": \"<string>\",\n  \"service\": \"<string>\",\n  \"serviceGroup\": \"<string>\",\n  \"serviceVersion\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6ff563cc-47cb-4a0d-bc4b-44da5876f39f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Override Rule Id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "988b5a2d-0198-4dc2-85b8-c1dee8a1521d",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Override Rule Id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c701a0d8-c7cd-4aaa-93f7-142ed2d758ff",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Override Rule Id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "24367d6e-472c-4bb2-bfd1-d175104efd17",
+          "name": "Apache Dubbo Delete the Specified Rule",
+          "request": {
+            "name": "Apache Dubbo Delete the Specified Rule",
+            "description": {
+              "content": "Delete the specified rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "override",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) rule id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b4bb93ba-849c-4daf-a640-39b7e6d269af",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "56e32385-4d85-4528-b249-8c8d70e7f2d0",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "override",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//127.0.0.1:38080",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ae8d7bd5-3d12-4efd-a3d6-23446af6afde",
+    "name": "Dubbo-Admin ConditionRule OverrideRule API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This is a dubbo-admin swagger ui server.",
+      "type": "text/plain"
+    }
+  }
+}

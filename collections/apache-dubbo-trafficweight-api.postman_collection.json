@@ -1,0 +1,680 @@
+{
+  "item": [
+    {
+      "id": "9e74c9a8-d303-4136-9cfc-5a6672944096",
+      "name": "TrafficWeight",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a043779a-b0c0-454d-b7a9-19e970da86ac",
+          "name": "Apache Dubbo Get Rule List",
+          "request": {
+            "name": "Apache Dubbo Get Rule List",
+            "description": {
+              "content": "get rule list",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "traffic",
+                "weight"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "service",
+                  "value": "<string>",
+                  "description": "(Required) service name"
+                },
+                {
+                  "disabled": false,
+                  "key": "version",
+                  "value": "<string>",
+                  "description": "(Required) service version"
+                },
+                {
+                  "disabled": false,
+                  "key": "group",
+                  "value": "<string>",
+                  "description": "(Required) service group"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "16b9f9fc-10d4-4e24-ac82-2fec08e74ad6",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "service",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "group",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"match\": {\n      \"address\": {\n        \"cird\": \"string\",\n        \"exact\": \"string\",\n        \"wildcard\": \"string\"\n      },\n      \"application\": {\n        \"oneof\": [\n          {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ]\n      },\n      \"param\": [\n        {\n          \"key\": \"string\",\n          \"value\": {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"key\": \"string\",\n          \"value\": {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ],\n      \"service\": {\n        \"oneof\": [\n          {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ]\n      }\n    },\n    \"weight\": 8779\n  },\n  {\n    \"match\": {\n      \"address\": {\n        \"cird\": \"string\",\n        \"exact\": \"string\",\n        \"wildcard\": \"string\"\n      },\n      \"application\": {\n        \"oneof\": [\n          {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ]\n      },\n      \"param\": [\n        {\n          \"key\": \"string\",\n          \"value\": {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"key\": \"string\",\n          \"value\": {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ],\n      \"service\": {\n        \"oneof\": [\n          {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"empty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"exact\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"noempty\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"prefix\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"regex\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"wildcard\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ]\n      }\n    },\n    \"weight\": 9824\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9c1ed63f-1f88-43a8-9818-d2cbda9d5055",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "service",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "group",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9a7f999d-4bee-437c-b0ed-8611bf0017e9",
+          "name": "Apache Dubbo Update Rule",
+          "request": {
+            "name": "Apache Dubbo Update Rule",
+            "description": {
+              "content": "update rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "traffic",
+                "weight"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"match\": {\n    \"address\": {\n      \"cird\": \"<string>\",\n      \"exact\": \"<string>\",\n      \"wildcard\": \"<string>\"\n    },\n    \"application\": {\n      \"oneof\": [\n        {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        }\n      ]\n    },\n    \"param\": [\n      {\n        \"key\": \"<string>\",\n        \"value\": {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        }\n      },\n      {\n        \"key\": \"<string>\",\n        \"value\": {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        }\n      }\n    ],\n    \"service\": {\n      \"oneof\": [\n        {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        }\n      ]\n    }\n  },\n  \"weight\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5e713b05-a910-4865-9891-6ceef64d67ac",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "512970a3-33a8-417b-ab1e-d9fc69c37bc7",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b8c28c62-5ea0-4ab2-bf4b-356d77369c58",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "da46c0de-56ca-4f27-91f9-8c5beb7e009b",
+          "name": "Apache Dubbo Create Rule",
+          "request": {
+            "name": "Apache Dubbo Create Rule",
+            "description": {
+              "content": "create rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "traffic",
+                "weight"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"match\": {\n    \"address\": {\n      \"cird\": \"<string>\",\n      \"exact\": \"<string>\",\n      \"wildcard\": \"<string>\"\n    },\n    \"application\": {\n      \"oneof\": [\n        {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        }\n      ]\n    },\n    \"param\": [\n      {\n        \"key\": \"<string>\",\n        \"value\": {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        }\n      },\n      {\n        \"key\": \"<string>\",\n        \"value\": {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        }\n      }\n    ],\n    \"service\": {\n      \"oneof\": [\n        {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        },\n        {\n          \"empty\": \"<string>\",\n          \"exact\": \"<string>\",\n          \"noempty\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"regex\": \"<string>\",\n          \"wildcard\": \"<string>\"\n        }\n      ]\n    }\n  },\n  \"weight\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0cd4e4ea-822b-413c-8a62-7cc5ab81adae",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8a1791eb-288a-4183-96e8-8c9349311506",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "076d151c-78d5-449c-b2fe-7b7ebe945737",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "deb5e7f4-f5ad-4e40-b468-c62574570905",
+          "name": "Apache Dubbo Delete Rule",
+          "request": {
+            "name": "Apache Dubbo Delete Rule",
+            "description": {
+              "content": "delete rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "traffic",
+                "weight"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "service",
+                  "value": "<string>",
+                  "description": "(Required) service name"
+                },
+                {
+                  "disabled": false,
+                  "key": "version",
+                  "value": "<string>",
+                  "description": "(Required) service version"
+                },
+                {
+                  "disabled": false,
+                  "key": "group",
+                  "value": "<string>",
+                  "description": "(Required) service group"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "54eb2e3a-5bcc-4547-91e1-9d7d7c9444c6",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "service",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "group",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "465bb6ff-ca0e-41df-9057-346e8c1d4694",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "traffic",
+                    "weight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "service",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "group",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//127.0.0.1:38080",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "49fee9ea-f80d-4b07-ba6e-bc311ccd2dc8",
+    "name": "Dubbo-Admin ConditionRule TrafficWeight API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This is a dubbo-admin swagger ui server.",
+      "type": "text/plain"
+    }
+  }
+}

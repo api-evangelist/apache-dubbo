@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dubbo-Admin ConditionRule TrafficRetry API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TrafficRetry",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/retry",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "get rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/retry"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/retry"
+          },
+          "docs": "update rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/retry",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "delete rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

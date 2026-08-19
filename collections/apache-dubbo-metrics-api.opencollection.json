@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dubbo-Admin ConditionRule metrics API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "metrics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Show Cluster Overview",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/metrics/cluster"
+          },
+          "docs": "show cluster overview"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show Prometheus Collected Metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/metrics/flow"
+          },
+          "docs": "show Prometheus collected metrics"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show Metadata of the Cluster, Like Dubbo Versions, Protocols, Etc.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/metrics/metadata"
+          },
+          "docs": "show metadata of the cluster, like dubbo versions, protocols, etc."
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show Basic Information of the Admin Process",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/version"
+          },
+          "docs": "show basic information of the Admin process"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

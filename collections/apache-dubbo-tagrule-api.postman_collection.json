@@ -1,0 +1,1342 @@
+{
+  "item": [
+    {
+      "id": "f2d56d34-b92d-46ea-a367-8ba4f3ccd646",
+      "name": "TagRule",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "298f1a41-1952-44d9-93d6-a59945896243",
+          "name": "Apache Dubbo Search Rule",
+          "request": {
+            "name": "Apache Dubbo Search Rule",
+            "description": {
+              "content": "Search rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "route",
+                "tag"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "application",
+                  "value": "<string>",
+                  "description": "application and service must not left empty at the same time"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a343ce63-7edb-49e0-9dfd-6ac43ceb257f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "application",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"configVersion\": \"string\",\n    \"enabled\": true,\n    \"tags\": [\n      {\n        \"match\": [\n          {\n            \"key\": \"string\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"name\": \"string\",\n        \"addresses\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      {\n        \"match\": [\n          {\n            \"key\": \"string\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"name\": \"string\",\n        \"addresses\": [\n          \"string\",\n          \"string\"\n        ]\n      }\n    ],\n    \"application\": \"string\",\n    \"force\": true,\n    \"id\": \"string\",\n    \"priority\": 9240,\n    \"runtime\": true,\n    \"service\": \"string\",\n    \"serviceGroup\": \"string\",\n    \"serviceVersion\": \"string\"\n  },\n  {\n    \"configVersion\": \"string\",\n    \"enabled\": false,\n    \"tags\": [\n      {\n        \"match\": [\n          {\n            \"key\": \"string\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"name\": \"string\",\n        \"addresses\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      {\n        \"match\": [\n          {\n            \"key\": \"string\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        ],\n        \"name\": \"string\",\n        \"addresses\": [\n          \"string\",\n          \"string\"\n        ]\n      }\n    ],\n    \"application\": \"string\",\n    \"force\": false,\n    \"id\": \"string\",\n    \"priority\": 5423,\n    \"runtime\": false,\n    \"service\": \"string\",\n    \"serviceGroup\": \"string\",\n    \"serviceVersion\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4f0f05e6-35d7-42f0-b008-e29ca8ed2e12",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "application",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bc916a23-e5ff-4150-984b-146e7ed01196",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "application",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d0296381-2316-497f-8694-f1a36553e2c5",
+          "name": "Apache Dubbo Create a New Tag Rule",
+          "request": {
+            "name": "Apache Dubbo Create a New Tag Rule",
+            "description": {
+              "content": "Create a new tag rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "route",
+                "tag"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"configVersion\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"tags\": [\n    {\n      \"match\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        }\n      ],\n      \"name\": \"<string>\",\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"match\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        }\n      ],\n      \"name\": \"<string>\",\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ],\n  \"application\": \"<string>\",\n  \"force\": \"<boolean>\",\n  \"id\": \"<string>\",\n  \"priority\": \"<integer>\",\n  \"runtime\": \"<boolean>\",\n  \"service\": \"<string>\",\n  \"serviceGroup\": \"<string>\",\n  \"serviceVersion\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "604038f1-5844-4294-944f-cf4f03bbbffb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0f80cf2a-13e3-41b8-bd81-9193873e7cb4",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "603bbe97-4636-4dae-9020-d15d762d0655",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e652bf09-05ac-4632-8437-34e2d5f5d715",
+          "name": "Apache Dubbo Disable the Specified Rule",
+          "request": {
+            "name": "Apache Dubbo Disable the Specified Rule",
+            "description": {
+              "content": "Disable the specified rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "route",
+                "tag",
+                "disable",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) rule id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5782e7fc-7f1e-4d9b-81bf-7237f19532a4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    "disable",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a2ded6d5-2a6c-4e37-982c-15241f6a3dda",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    "disable",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "06644bef-004f-471e-84e0-7963b0855cb5",
+          "name": "Apache Dubbo Enable the Specified Rule",
+          "request": {
+            "name": "Apache Dubbo Enable the Specified Rule",
+            "description": {
+              "content": "Enable the specified rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "route",
+                "tag",
+                "enable",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) rule id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1b847a2a-b57c-4c4f-bdcb-2fbdc1bd3df2",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    "enable",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a4ed327f-442e-4042-8f9f-6e17e5211538",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    "enable",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e00ec1aa-733b-437d-93c5-176083814cc9",
+          "name": "Apache Dubbo Show the Detail of One Specified Rule",
+          "request": {
+            "name": "Apache Dubbo Show the Detail of One Specified Rule",
+            "description": {
+              "content": "Show the detail of one specified rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "route",
+                "tag",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) rule id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3a3e2caa-2f06-4bff-b5cd-8c331a6c9a6f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"configVersion\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"tags\": [\n    {\n      \"match\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        }\n      ],\n      \"name\": \"<string>\",\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"match\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        }\n      ],\n      \"name\": \"<string>\",\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ],\n  \"application\": \"<string>\",\n  \"force\": \"<boolean>\",\n  \"id\": \"<string>\",\n  \"priority\": \"<integer>\",\n  \"runtime\": \"<boolean>\",\n  \"service\": \"<string>\",\n  \"serviceGroup\": \"<string>\",\n  \"serviceVersion\": \"<string>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9318febd-f253-424b-9788-c25f6b0224e9",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d308f0dd-346f-441a-9913-2723fd399d99",
+          "name": "Apache Dubbo Update Rule",
+          "request": {
+            "name": "Apache Dubbo Update Rule",
+            "description": {
+              "content": "Update rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "route",
+                "tag",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) rule id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"configVersion\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"tags\": [\n    {\n      \"match\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        }\n      ],\n      \"name\": \"<string>\",\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"match\": [\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        },\n        {\n          \"key\": \"<string>\",\n          \"value\": {\n            \"empty\": \"<string>\",\n            \"exact\": \"<string>\",\n            \"noempty\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"regex\": \"<string>\",\n            \"wildcard\": \"<string>\"\n          }\n        }\n      ],\n      \"name\": \"<string>\",\n      \"addresses\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ],\n  \"application\": \"<string>\",\n  \"force\": \"<boolean>\",\n  \"id\": \"<string>\",\n  \"priority\": \"<integer>\",\n  \"runtime\": \"<boolean>\",\n  \"service\": \"<string>\",\n  \"serviceGroup\": \"<string>\",\n  \"serviceVersion\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "345693ec-9861-49a9-9ad0-3fcbdec50d2d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e0727862-0adc-41f3-aa12-b1e093b6c797",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "67a36bb0-2b54-44e2-a5da-23a5816166f3",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "edb4da74-244f-48bb-93d1-50f76223d182",
+          "name": "Apache Dubbo Delete the Specified Rule",
+          "request": {
+            "name": "Apache Dubbo Delete the Specified Rule",
+            "description": {
+              "content": "Delete the specified rule",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                ":env",
+                "rules",
+                "route",
+                "tag",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "dev",
+                  "key": "env",
+                  "description": "(Required) environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) rule id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "00b49519-9f87-4d09-8550-dfe6be7bf819",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9a1e87a7-19a9-474d-8bcf-8cabda1d6c8e",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":env",
+                    "rules",
+                    "route",
+                    "tag",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "dev",
+                      "key": "env",
+                      "description": "(Required) environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) rule id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//127.0.0.1:38080",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2a006e7f-8bc1-4663-bb51-a655de9d5942",
+    "name": "Dubbo-Admin ConditionRule TagRule API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This is a dubbo-admin swagger ui server.",
+      "type": "text/plain"
+    }
+  }
+}

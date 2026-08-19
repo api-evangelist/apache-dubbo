@@ -1,0 +1,205 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dubbo-Admin ConditionRule OverrideRule API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "OverrideRule",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Search Override Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/override",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application and service must not left empty at the same time"
+              },
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "application and service must not left empty at the same time"
+              },
+              {
+                "name": "serviceVersion",
+                "value": "",
+                "type": "query",
+                "description": "version of dubbo service"
+              },
+              {
+                "name": "serviceGroup",
+                "value": "",
+                "type": "query",
+                "description": "group of dubbo service"
+              }
+            ]
+          },
+          "docs": "Search override rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create a New Override Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/override",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Create a new override rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Disable the Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/override/disable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Disable the specified rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Enable the Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/rules/override/enable/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Enable the specified rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show the Detail of One Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/rules/override/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Show the detail of one specified rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update Override Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/rules/override/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Override Rule Id"
+              }
+            ]
+          },
+          "docs": "Update override rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete the Specified Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/rules/override/:id",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "rule id"
+              }
+            ]
+          },
+          "docs": "Delete the specified rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

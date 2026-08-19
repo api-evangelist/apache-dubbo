@@ -1,0 +1,93 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dubbo-Admin ConditionRule MockRules API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "MockRules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Create or Update MockRule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/mock/rule",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Create or update MockRule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete MockRule by Id",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/mock/rule",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Delete MockRule by id"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Get MockRules by Page",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/mock/rule/list",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query",
+                "description": "filter condition"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "page offset"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "page limit"
+              }
+            ]
+          },
+          "docs": "Get MockRules by page"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

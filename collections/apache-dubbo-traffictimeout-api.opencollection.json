@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dubbo-Admin ConditionRule TrafficTimeout API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TrafficTimeout",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Timeout Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/timeout",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "get timeout rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create a New Timeout Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/timeout"
+          },
+          "docs": "Create a new timeout rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Update a New Timeout Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/timeout"
+          },
+          "docs": "update a new timeout rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete a New Timeout Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/timeout",
+            "params": [
+              {
+                "name": "service",
+                "value": "",
+                "type": "query",
+                "description": "service name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query",
+                "description": "service version"
+              },
+              {
+                "name": "group",
+                "value": "",
+                "type": "query",
+                "description": "service group"
+              }
+            ]
+          },
+          "docs": "delete a new timeout rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dubbo-Admin ConditionRule TrafficAccesslog API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TrafficAccesslog",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get Rule List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/traffic/accesslog",
+            "params": [
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application name"
+              }
+            ]
+          },
+          "docs": "get rule list"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/:env/traffic/accesslog"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Create Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/:env/traffic/accesslog"
+          },
+          "docs": "create rule"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Delete Rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/:env/traffic/accesslog",
+            "params": [
+              {
+                "name": "application",
+                "value": "",
+                "type": "query",
+                "description": "application name"
+              }
+            ]
+          },
+          "docs": "delete rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

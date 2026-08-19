@@ -1,0 +1,143 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dubbo-Admin ConditionRule Services API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Services",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Dubbo Get All Applications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/applications",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Get all applications"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Get All Consumers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/consumers",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Get all consumers"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Search Services by Different Patterns and Keywords",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/service",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "pattern",
+                "value": "",
+                "type": "query",
+                "description": "supported values: application, service or ip"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query",
+                "description": "keyword to search"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "page number"
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "page size"
+              }
+            ]
+          },
+          "docs": "Search services by different patterns and keywords"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Show Detail of the Specified Service",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/service/:service",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              },
+              {
+                "name": "service",
+                "value": "",
+                "type": "path",
+                "description": "service format: 'group/service:version'"
+              }
+            ]
+          },
+          "docs": "Show detail of the specified service"
+        },
+        {
+          "info": {
+            "name": "Apache Dubbo Get All Services",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/:env/services",
+            "params": [
+              {
+                "name": "env",
+                "value": "",
+                "type": "path",
+                "description": "environment"
+              }
+            ]
+          },
+          "docs": "Get all services"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
