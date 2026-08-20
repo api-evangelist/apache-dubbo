@@ -25,6 +25,15 @@ tags:
   - Go
   - Java
   - Microservices
+  - Open-Source
+  - RPC
+  - Service Discovery
+  - Service Mesh
+tags_raw:
+  - Apache
+  - Go
+  - Java
+  - Microservices
   - Open Source
   - RPC
   - Service Discovery
@@ -87,6 +96,8 @@ apis:
   description: The metrics API from Apache Dubbo — 4 operation(s) for metrics.
   humanURL: https://github.com/apache/dubbo-admin
   tags:
+  - Metrics
+  tags_raw:
   - metrics
   properties:
   - type: OpenAPI
@@ -100,6 +111,8 @@ apis:
   description: The MockRules API from Apache Dubbo — 2 operation(s) for mockrules.
   humanURL: https://github.com/apache/dubbo-admin
   tags:
+  - Mock Rules
+  tags_raw:
   - MockRules
   properties:
   - type: OpenAPI
