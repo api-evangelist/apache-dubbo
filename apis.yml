@@ -124,7 +124,7 @@ apis:
   description: The MockRules API from Apache Dubbo — 2 operation(s) for mockrules.
   humanURL: https://github.com/apache/dubbo-admin
   tags:
-  - Mock Rules
+  - MockRules
   tags_raw:
   - MockRules
   properties:
