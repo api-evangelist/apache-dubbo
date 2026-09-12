@@ -278,6 +278,8 @@ apis:
   - type: GitHubRepository
     url: https://github.com/apache/dubbo-admin
 common:
+  - type: Website
+    url: https://www.apache.org/
   - type: IssueTracker
     url: https://github.com/apache/dubbo/issues
   - type: SecurityPolicy
