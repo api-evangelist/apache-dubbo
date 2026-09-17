@@ -119,21 +119,6 @@ apis:
     url: https://dubbo.apache.org/en/overview/reference/admin/
   - type: GitHubRepository
     url: https://github.com/apache/dubbo-admin
-- aid: apache-dubbo:apache-dubbo-mockrules-api
-  name: Apache Dubbo MockRules API
-  description: The MockRules API from Apache Dubbo — 2 operation(s) for mockrules.
-  humanURL: https://github.com/apache/dubbo-admin
-  tags:
-  - Mock Rules
-  tags_raw:
-  - MockRules
-  properties:
-  - type: OpenAPI
-    url: openapi/apache-dubbo-mockrules-api-openapi.yml
-  - type: Documentation
-    url: https://dubbo.apache.org/en/overview/reference/admin/
-  - type: GitHubRepository
-    url: https://github.com/apache/dubbo-admin
 - aid: apache-dubbo:apache-dubbo-overriderule-api
   name: Apache Dubbo OverrideRule API
   description: The OverrideRule API from Apache Dubbo — 4 operation(s) for overriderule.
@@ -273,6 +258,19 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/apache-dubbo-trafficweight-api-openapi.yml
+  - type: Documentation
+    url: https://dubbo.apache.org/en/overview/reference/admin/
+  - type: GitHubRepository
+    url: https://github.com/apache/dubbo-admin
+- aid: apache-dubbo:apache-dubbo-mock-rules-api
+  name: Apache Dubbo Mock Rules API
+  description: The Mock Rules API from Apache Dubbo — 2 operation(s) for mock rules.
+  humanURL: https://dubbo.apache.org/en/overview/mannual/java-sdk/
+  tags:
+  - Mock Rules
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-dubbo-mock-rules-api-openapi.yml
   - type: Documentation
     url: https://dubbo.apache.org/en/overview/reference/admin/
   - type: GitHubRepository
