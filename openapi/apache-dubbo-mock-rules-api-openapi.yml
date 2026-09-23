@@ -1,7 +1,7 @@
 openapi: 3.2.0
 info:
   description: This is a dubbo-admin swagger ui server.
-  title: Dubbo-Admin Traffic Region API
+  title: Dubbo-Admin Mock Rules API
   contact: {}
   license:
     name: Apache 2.0
@@ -10,95 +10,29 @@ info:
 servers:
 - url: https://127.0.0.1:38080/
 tags:
-- name: TrafficRegion
+- name: Mock Rules
 paths:
-  /api/{env}/traffic/region:
-    get:
-      description: get rule list
-      tags:
-      - TrafficRegion
-      summary: Apache Dubbo Get Rule List
-      parameters:
-      - description: service name
-        name: service
-        in: query
-        required: true
-        schema:
-          type: string
-      - description: service version
-        name: version
-        in: query
-        required: true
-        schema:
-          type: string
-      - description: service group
-        name: group
-        in: query
-        required: true
-        schema:
-          type: string
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/model.Region'
-        '500':
-          description: Internal Server Error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/model.HTTPError'
-      operationId: getApiByEnvTrafficRegion
-      x-operation-id-source: derived
-    put:
-      description: update rule
-      tags:
-      - TrafficRegion
-      summary: Apache Dubbo Update Rule
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: bool
-        '400':
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/model.HTTPError'
-        '500':
-          description: Internal Server Error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/model.HTTPError'
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/model.Region'
-        description: rule
-        required: true
-      operationId: putApiByEnvTrafficRegion
-      x-operation-id-source: derived
+  /api/{env}/mock/rule:
     post:
-      description: create rule
+      description: Create or update MockRule
       tags:
-      - TrafficRegion
-      summary: Apache Dubbo Create Rule
+      - Mock Rules
+      summary: Apache Dubbo Create or Update MockRule
+      parameters:
+      - description: environment
+        name: env
+        in: path
+        schema:
+          type: string
+          default: dev
+        required: true
       responses:
-        '200':
-          description: OK
+        '201':
+          description: Created
           content:
             application/json:
               schema:
-                type: bool
+                type: boolean
         '400':
           description: Bad Request
           content:
@@ -115,42 +49,31 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/model.Region'
-        description: rule
+              $ref: '#/components/schemas/model.MockRule'
+        description: MockRule
         required: true
-      operationId: postApiByEnvTrafficRegion
+      operationId: postApiByEnvMockRule
       x-operation-id-source: derived
     delete:
-      description: delete rule
+      description: Delete MockRule by id
       tags:
-      - TrafficRegion
-      summary: Apache Dubbo Delete Rule
+      - Mock Rules
+      summary: Apache Dubbo Delete MockRule by Id
       parameters:
-      - description: service name
-        name: service
-        in: query
-        required: true
+      - description: environment
+        name: env
+        in: path
         schema:
           type: string
-      - description: service version
-        name: version
-        in: query
+          default: dev
         required: true
-        schema:
-          type: string
-      - description: service group
-        name: group
-        in: query
-        required: true
-        schema:
-          type: string
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                type: bool
+                type: boolean
         '400':
           description: Bad Request
           content:
@@ -163,7 +86,64 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/model.HTTPError'
-      operationId: deleteApiByEnvTrafficRegion
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.MockRule'
+        description: MockRule
+        required: true
+      operationId: deleteApiByEnvMockRule
+      x-operation-id-source: derived
+  /api/{env}/mock/rule/list:
+    get:
+      description: Get MockRules by page
+      tags:
+      - Mock Rules
+      summary: Apache Dubbo Get MockRules by Page
+      parameters:
+      - description: environment
+        name: env
+        in: path
+        schema:
+          type: string
+          default: dev
+        required: true
+      - description: filter condition
+        name: filter
+        in: query
+        schema:
+          type: string
+      - description: page offset
+        name: offset
+        in: query
+        schema:
+          type: integer
+      - description: page limit
+        name: limit
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.ListMockRulesByPage'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: getApiByEnvMockRuleList
       x-operation-id-source: derived
 components:
   schemas:
@@ -173,17 +153,25 @@ components:
         error:
           description: error message
           type: string
-    model.Region:
+    model.MockRule:
       type: object
-      required:
-      - rule
-      - service
       properties:
-        group:
+        enable:
+          type: boolean
+        id:
+          type: integer
+        methodName:
           type: string
         rule:
           type: string
-        service:
+        serviceName:
           type: string
-        version:
-          type: string
+    model.ListMockRulesByPage:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.MockRule'
+        total:
+          type: integer

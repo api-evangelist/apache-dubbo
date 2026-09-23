@@ -1,291 +1,337 @@
-swagger: '2.0'
+openapi: 3.2.0
 info:
   description: This is a dubbo-admin swagger ui server.
-  title: Dubbo-Admin ConditionRule API
+  title: Dubbo-Admin Condition Rule API
   contact: {}
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: '1.0'
-host: 127.0.0.1:38080
-basePath: /
+servers:
+- url: https://127.0.0.1:38080/
 tags:
 - name: ConditionRule
 paths:
   /api/{env}/rules/route/condition:
     get:
       description: Search condition rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - ConditionRule
       summary: Apache Dubbo Search Condition Rule
       parameters:
-      - type: string
-        default: dev
-        description: environment
+      - description: environment
         name: env
         in: path
-      - type: string
-        description: application and service must not left empty at the same time
+        schema:
+          type: string
+          default: dev
+        required: true
+      - description: application and service must not left empty at the same time
         name: application
         in: query
-      - type: string
-        description: application and service must not left empty at the same time
+        schema:
+          type: string
+      - description: application and service must not left empty at the same time
         name: service
         in: query
-      - type: string
-        description: version of dubbo service
+        schema:
+          type: string
+      - description: version of dubbo service
         name: serviceVersion
         in: query
-      - type: string
-        description: group of dubbo service
+        schema:
+          type: string
+      - description: group of dubbo service
         name: serviceGroup
         in: query
+        schema:
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/model.ConditionRouteDto'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/model.ConditionRouteDto'
         '400':
           description: Bad Request
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: getApiByEnvRulesRouteCondition
+      x-operation-id-source: derived
     post:
       description: Create a new condition rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - ConditionRule
       summary: Apache Dubbo Create a New Condition Rule
       parameters:
-      - type: string
-        default: dev
-        description: environment
+      - description: environment
         name: env
         in: path
-      - description: Condition Rule Input
-        name: routeDto
-        in: body
-        required: true
         schema:
-          $ref: '#/definitions/model.ConditionRouteDto'
+          type: string
+          default: dev
+        required: true
       responses:
         '200':
           description: OK
-          schema:
-            type: boolean
+          content:
+            application/json:
+              schema:
+                type: boolean
         '400':
           description: Bad Request
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.ConditionRouteDto'
+        description: Condition Rule Input
+        required: true
+      operationId: postApiByEnvRulesRouteCondition
+      x-operation-id-source: derived
   /api/{env}/rules/route/condition/disable/{id}:
     put:
       description: Disable the specified condition rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - ConditionRule
       summary: Apache Dubbo Disable the Specified Condition Rule
       parameters:
-      - type: string
-        default: dev
-        description: environment
+      - description: environment
         name: env
         in: path
-      - type: string
-        description: Condition Rule Id
+        schema:
+          type: string
+          default: dev
+        required: true
+      - description: Condition Rule Id
         name: id
         in: path
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            type: boolean
+          content:
+            application/json:
+              schema:
+                type: boolean
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: putApiByEnvRulesRouteConditionDisableById
+      x-operation-id-source: derived
   /api/{env}/rules/route/condition/enable/{id}:
     put:
       description: Enable the specified condition rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - ConditionRule
       summary: Apache Dubbo Enable the Specified Condition Rule
       parameters:
-      - type: string
-        default: dev
-        description: environment
+      - description: environment
         name: env
         in: path
-      - type: string
-        description: Condition Rule Id
+        schema:
+          type: string
+          default: dev
+        required: true
+      - description: Condition Rule Id
         name: id
         in: path
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            type: boolean
+          content:
+            application/json:
+              schema:
+                type: boolean
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: putApiByEnvRulesRouteConditionEnableById
+      x-operation-id-source: derived
   /api/{env}/rules/route/condition/{id}:
     get:
       description: Show the detail of one specified condition rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - ConditionRule
       summary: Apache Dubbo Show the Detail of One Specified Condition Rule
       parameters:
-      - type: string
-        default: dev
-        description: environment
+      - description: environment
         name: env
         in: path
-      - type: string
-        description: Condition Rule Id
+        schema:
+          type: string
+          default: dev
+        required: true
+      - description: Condition Rule Id
         name: id
         in: path
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            $ref: '#/definitions/model.ConditionRouteDto'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.ConditionRouteDto'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: getApiByEnvRulesRouteConditionById
+      x-operation-id-source: derived
     post:
       description: Update condition rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - ConditionRule
       summary: Apache Dubbo Update Condition Rule
       parameters:
-      - type: string
-        default: dev
-        description: environment
+      - description: environment
         name: env
         in: path
-      - type: string
-        description: Condition Rule Id
+        schema:
+          type: string
+          default: dev
+        required: true
+      - description: Condition Rule Id
         name: id
         in: path
         required: true
-      - description: Condition Rule Input
-        name: routeDto
-        in: body
-        required: true
         schema:
-          $ref: '#/definitions/model.ConditionRouteDto'
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            type: boolean
+          content:
+            application/json:
+              schema:
+                type: boolean
         '400':
           description: Bad Request
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.ConditionRouteDto'
+        description: Condition Rule Input
+        required: true
+      operationId: postApiByEnvRulesRouteConditionById
+      x-operation-id-source: derived
     delete:
       description: Delete the specified condition rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - ConditionRule
       summary: Apache Dubbo Delete the Specified Condition Rule
       parameters:
-      - type: string
-        default: dev
-        description: environment
+      - description: environment
         name: env
         in: path
-      - type: string
-        description: Condition Rule Id
+        schema:
+          type: string
+          default: dev
+        required: true
+      - description: Condition Rule Id
         name: id
         in: path
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            type: boolean
+          content:
+            application/json:
+              schema:
+                type: boolean
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
-definitions:
-  model.ConditionRouteDto:
-    type: object
-    required:
-    - conditions
-    - configVersion
-    - enabled
-    properties:
-      application:
-        type: string
-      conditions:
-        type: array
-        items:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: deleteApiByEnvRulesRouteConditionById
+      x-operation-id-source: derived
+components:
+  schemas:
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
           type: string
-      configVersion:
-        type: string
-      enabled:
-        type: boolean
-      force:
-        type: boolean
-      id:
-        type: string
-      priority:
-        type: integer
-      runtime:
-        type: boolean
-      service:
-        type: string
-      serviceGroup:
-        type: string
-      serviceVersion:
-        type: string
-  model.HTTPError:
-    type: object
-    properties:
-      error:
-        description: error message
-        type: string
+    model.ConditionRouteDto:
+      type: object
+      required:
+      - conditions
+      - configVersion
+      - enabled
+      properties:
+        application:
+          type: string
+        conditions:
+          type: array
+          items:
+            type: string
+        configVersion:
+          type: string
+        enabled:
+          type: boolean
+        force:
+          type: boolean
+        id:
+          type: string
+        priority:
+          type: integer
+        runtime:
+          type: boolean
+        service:
+          type: string
+        serviceGroup:
+          type: string
+        serviceVersion:
+          type: string

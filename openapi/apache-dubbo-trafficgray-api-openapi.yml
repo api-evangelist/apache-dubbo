@@ -1,180 +1,195 @@
-swagger: '2.0'
+openapi: 3.2.0
 info:
   description: This is a dubbo-admin swagger ui server.
-  title: Dubbo-Admin ConditionRule TrafficGray API
+  title: Dubbo-Admin Traffic Gray API
   contact: {}
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: '1.0'
-host: 127.0.0.1:38080
-basePath: /
+servers:
+- url: https://127.0.0.1:38080/
 tags:
 - name: TrafficGray
 paths:
   /api/{env}/traffic/gray:
     get:
       description: get rule list
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - TrafficGray
       summary: Apache Dubbo Get Rule List
       parameters:
-      - type: string
-        description: application name
+      - description: application name
         name: application
         in: query
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/model.Gray'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/model.Gray'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: getApiByEnvTrafficGray
+      x-operation-id-source: derived
     put:
       description: update rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - TrafficGray
       summary: Apache Dubbo Update Rule
-      parameters:
-      - description: rule
-        name: gray
-        in: body
-        required: true
-        schema:
-          $ref: '#/definitions/model.Gray'
       responses:
         '200':
           description: OK
-          schema:
-            type: bool
+          content:
+            application/json:
+              schema:
+                type: bool
         '400':
           description: Bad Request
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Gray'
+        description: rule
+        required: true
+      operationId: putApiByEnvTrafficGray
+      x-operation-id-source: derived
     post:
       description: create rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - TrafficGray
       summary: Apache Dubbo Create Rule
-      parameters:
-      - description: rule
-        name: gray
-        in: body
-        required: true
-        schema:
-          $ref: '#/definitions/model.Gray'
       responses:
         '200':
           description: OK
-          schema:
-            type: bool
+          content:
+            application/json:
+              schema:
+                type: bool
         '400':
           description: Bad Request
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Gray'
+        description: rule
+        required: true
+      operationId: postApiByEnvTrafficGray
+      x-operation-id-source: derived
     delete:
       description: delete rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - TrafficGray
       summary: Apache Dubbo Delete Rule
       parameters:
-      - type: string
-        description: application name
+      - description: application name
         name: application
         in: query
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            type: bool
+          content:
+            application/json:
+              schema:
+                type: bool
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
-definitions:
-  model.StringMatch:
-    type: object
-    properties:
-      empty:
-        type: string
-      exact:
-        type: string
-      noempty:
-        type: string
-      prefix:
-        type: string
-      regex:
-        type: string
-      wildcard:
-        type: string
-  model.Gray:
-    type: object
-    required:
-    - application
-    - tags
-    properties:
-      application:
-        type: string
-      tags:
-        type: array
-        items:
-          $ref: '#/definitions/model.Tag'
-  model.Tag:
-    type: object
-    required:
-    - match
-    - name
-    properties:
-      addresses:
-        type: array
-        items:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: deleteApiByEnvTrafficGray
+      x-operation-id-source: derived
+components:
+  schemas:
+    model.Gray:
+      type: object
+      required:
+      - application
+      - tags
+      properties:
+        application:
           type: string
-      match:
-        type: array
-        items:
-          $ref: '#/definitions/model.ParamMatch'
-      name:
-        type: string
-  model.ParamMatch:
-    type: object
-    properties:
-      key:
-        type: string
-      value:
-        $ref: '#/definitions/model.StringMatch'
-  model.HTTPError:
-    type: object
-    properties:
-      error:
-        description: error message
-        type: string
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.Tag'
+    model.Tag:
+      type: object
+      required:
+      - match
+      - name
+      properties:
+        addresses:
+          type: array
+          items:
+            type: string
+        match:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.ParamMatch'
+        name:
+          type: string
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
+    model.StringMatch:
+      type: object
+      properties:
+        empty:
+          type: string
+        exact:
+          type: string
+        noempty:
+          type: string
+        prefix:
+          type: string
+        regex:
+          type: string
+        wildcard:
+          type: string
+    model.ParamMatch:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          $ref: '#/components/schemas/model.StringMatch'

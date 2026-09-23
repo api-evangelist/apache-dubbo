@@ -1,24 +1,10 @@
 {
   "provider": "apache-dubbo",
   "sources": [
-    "apache-dubbo-conditionrule-api-openapi.yml",
-    "apache-dubbo-metrics-api-openapi.yml",
-    "apache-dubbo-mockrules-api-openapi.yml",
-    "apache-dubbo-overriderule-api-openapi.yml",
-    "apache-dubbo-services-api-openapi.yml",
-    "apache-dubbo-tagrule-api-openapi.yml",
-    "apache-dubbo-trafficaccesslog-api-openapi.yml",
-    "apache-dubbo-trafficargument-api-openapi.yml",
-    "apache-dubbo-trafficgray-api-openapi.yml",
-    "apache-dubbo-trafficmock-api-openapi.yml",
-    "apache-dubbo-trafficregion-api-openapi.yml",
-    "apache-dubbo-trafficretry-api-openapi.yml",
-    "apache-dubbo-traffictimeout-api-openapi.yml",
-    "apache-dubbo-trafficweight-api-openapi.yml"
+    "_original/apache-dubbo-admin-openapi-original.json"
   ],
   "outputs": [
     "apache-dubbo-conditionrule-api-openapi.yml",
-    "apache-dubbo-metrics-api-openapi.yml",
     "apache-dubbo-mockrules-api-openapi.yml",
     "apache-dubbo-overriderule-api-openapi.yml",
     "apache-dubbo-services-api-openapi.yml",
@@ -30,11 +16,48 @@
     "apache-dubbo-trafficregion-api-openapi.yml",
     "apache-dubbo-trafficretry-api-openapi.yml",
     "apache-dubbo-traffictimeout-api-openapi.yml",
-    "apache-dubbo-trafficweight-api-openapi.yml"
+    "apache-dubbo-trafficweight-api-openapi.yml",
+    "apache-dubbo-metrics-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apache-dubbo-admin-openapi-original.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: ConditionRule",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: MockRules",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: OverrideRule",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: Services",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: TagRule",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: TrafficAccesslog",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: TrafficArgument",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: TrafficGray",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: TrafficMock",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: TrafficRegion",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: TrafficRetry",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: TrafficTimeout",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: TrafficWeight",
+    "apache-dubbo-admin-openapi-original.json: declared missing tag: metrics",
+    "superseded outputs removed: apache-dubbo-mock-rules-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 16 total)"
+  ],
+  "skipped": [
+    "apache-dubbo-conditionrule-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-metrics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-mock-rules-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-overriderule-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-services-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-tagrule-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-trafficaccesslog-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-trafficargument-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-trafficgray-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-trafficmock-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-trafficregion-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-trafficretry-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-traffictimeout-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-dubbo-trafficweight-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

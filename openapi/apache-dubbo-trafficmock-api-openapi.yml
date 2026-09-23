@@ -1,168 +1,189 @@
-swagger: '2.0'
+openapi: 3.2.0
 info:
   description: This is a dubbo-admin swagger ui server.
-  title: Dubbo-Admin ConditionRule TrafficMock API
+  title: Dubbo-Admin Traffic Mock API
   contact: {}
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: '1.0'
-host: 127.0.0.1:38080
-basePath: /
+servers:
+- url: https://127.0.0.1:38080/
 tags:
 - name: TrafficMock
 paths:
   /api/{env}/traffic/mock:
     get:
       description: get rule list
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - TrafficMock
       summary: Apache Dubbo Get Rule List
       parameters:
-      - type: string
-        description: service name
+      - description: service name
         name: service
         in: query
         required: true
-      - type: string
-        description: service version
+        schema:
+          type: string
+      - description: service version
         name: version
         in: query
         required: true
-      - type: string
-        description: service group
+        schema:
+          type: string
+      - description: service group
         name: group
         in: query
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/model.Mock'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/model.Mock'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: getApiByEnvTrafficMock
+      x-operation-id-source: derived
     put:
       description: update rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - TrafficMock
       summary: Apache Dubbo Update Rule
-      parameters:
-      - description: rule
-        name: mock
-        in: body
-        required: true
-        schema:
-          $ref: '#/definitions/model.Mock'
       responses:
         '200':
           description: OK
-          schema:
-            type: bool
+          content:
+            application/json:
+              schema:
+                type: bool
         '400':
           description: Bad Request
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Mock'
+        description: rule
+        required: true
+      operationId: putApiByEnvTrafficMock
+      x-operation-id-source: derived
     post:
       description: create rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - TrafficMock
       summary: Apache Dubbo Create Rule
-      parameters:
-      - description: rule
-        name: mock
-        in: body
-        required: true
-        schema:
-          $ref: '#/definitions/model.Mock'
       responses:
         '200':
           description: OK
-          schema:
-            type: bool
+          content:
+            application/json:
+              schema:
+                type: bool
         '400':
           description: Bad Request
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Mock'
+        description: rule
+        required: true
+      operationId: postApiByEnvTrafficMock
+      x-operation-id-source: derived
     delete:
       description: delete rule
-      consumes:
-      - application/json
-      produces:
-      - application/json
       tags:
       - TrafficMock
       summary: Apache Dubbo Delete Rule
       parameters:
-      - type: string
-        description: service name
+      - description: service name
         name: service
         in: query
         required: true
-      - type: string
-        description: service version
+        schema:
+          type: string
+      - description: service version
         name: version
         in: query
         required: true
-      - type: string
-        description: service group
+        schema:
+          type: string
+      - description: service group
         name: group
         in: query
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: OK
-          schema:
-            type: bool
+          content:
+            application/json:
+              schema:
+                type: bool
         '400':
           description: Bad Request
-          schema:
-            $ref: '#/definitions/model.HTTPError'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
         '500':
           description: Internal Server Error
-          schema:
-            $ref: '#/definitions/model.HTTPError'
-definitions:
-  model.Mock:
-    type: object
-    required:
-    - mock
-    - service
-    properties:
-      group:
-        type: string
-      mock:
-        type: string
-      service:
-        type: string
-      version:
-        type: string
-  model.HTTPError:
-    type: object
-    properties:
-      error:
-        description: error message
-        type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.HTTPError'
+      operationId: deleteApiByEnvTrafficMock
+      x-operation-id-source: derived
+components:
+  schemas:
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
+    model.Mock:
+      type: object
+      required:
+      - mock
+      - service
+      properties:
+        group:
+          type: string
+        mock:
+          type: string
+        service:
+          type: string
+        version:
+          type: string
