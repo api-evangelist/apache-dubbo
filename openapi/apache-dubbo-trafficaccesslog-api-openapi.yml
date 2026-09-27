@@ -137,12 +137,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
-          type: string
     model.Accesslog:
       type: object
       required:
@@ -152,4 +146,10 @@ components:
         accesslog:
           type: string
         application:
+          type: string
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
           type: string

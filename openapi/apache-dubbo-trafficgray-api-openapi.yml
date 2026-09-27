@@ -149,6 +149,34 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/model.Tag'
+    model.ParamMatch:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          $ref: '#/components/schemas/model.StringMatch'
+    model.StringMatch:
+      type: object
+      properties:
+        empty:
+          type: string
+        exact:
+          type: string
+        noempty:
+          type: string
+        prefix:
+          type: string
+        regex:
+          type: string
+        wildcard:
+          type: string
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
     model.Tag:
       type: object
       required:
@@ -165,31 +193,3 @@ components:
             $ref: '#/components/schemas/model.ParamMatch'
         name:
           type: string
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
-          type: string
-    model.StringMatch:
-      type: object
-      properties:
-        empty:
-          type: string
-        exact:
-          type: string
-        noempty:
-          type: string
-        prefix:
-          type: string
-        regex:
-          type: string
-        wildcard:
-          type: string
-    model.ParamMatch:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          $ref: '#/components/schemas/model.StringMatch'

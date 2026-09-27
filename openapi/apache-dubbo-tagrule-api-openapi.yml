@@ -283,43 +283,13 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    model.Tag:
-      type: object
-      required:
-      - match
-      - name
-      properties:
-        addresses:
-          type: array
-          items:
-            type: string
-        match:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.ParamMatch'
-        name:
-          type: string
-    model.HTTPError:
+    model.ParamMatch:
       type: object
       properties:
-        error:
-          description: error message
+        key:
           type: string
-    model.StringMatch:
-      type: object
-      properties:
-        empty:
-          type: string
-        exact:
-          type: string
-        noempty:
-          type: string
-        prefix:
-          type: string
-        regex:
-          type: string
-        wildcard:
-          type: string
+        value:
+          $ref: '#/components/schemas/model.StringMatch'
     model.TagRouteDto:
       type: object
       required:
@@ -351,10 +321,40 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/model.Tag'
-    model.ParamMatch:
+    model.StringMatch:
       type: object
       properties:
-        key:
+        empty:
           type: string
-        value:
-          $ref: '#/components/schemas/model.StringMatch'
+        exact:
+          type: string
+        noempty:
+          type: string
+        prefix:
+          type: string
+        regex:
+          type: string
+        wildcard:
+          type: string
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
+    model.Tag:
+      type: object
+      required:
+      - match
+      - name
+      properties:
+        addresses:
+          type: array
+          items:
+            type: string
+        match:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.ParamMatch'
+        name:
+          type: string

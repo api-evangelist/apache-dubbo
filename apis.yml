@@ -38,7 +38,7 @@ tags:
   - Go
   - Java
   - Microservices
-  - Open-Source
+  - Open Source
   - RPC
   - Service Discovery
   - Service Mesh
@@ -51,6 +51,7 @@ tags_raw:
   - RPC
   - Service Discovery
   - Service Mesh
+  - Open-Source
 created: '2026-03-16'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-dubbo/refs/heads/main/apis.yml
@@ -105,7 +106,7 @@ apis:
   - type: GitHubRepository
     url: https://github.com/apache/dubbo-admin
 - aid: apache-dubbo:apache-dubbo-metrics-api
-  name: Apache Dubbo metrics API
+  name: Apache Dubbo Metrics API
   description: The metrics API from Apache Dubbo — 4 operation(s) for metrics.
   humanURL: https://github.com/apache/dubbo-admin
   tags:

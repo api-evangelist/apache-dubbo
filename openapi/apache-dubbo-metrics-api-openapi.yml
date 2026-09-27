@@ -92,6 +92,30 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    model.ClusterMetricsRes:
+      type: object
+      properties:
+        data:
+          type: object
+          additionalProperties:
+            type: integer
+    version.Version:
+      type: object
+      properties:
+        buildDate:
+          type: string
+        compiler:
+          type: string
+        gitCommit:
+          type: string
+        gitTreeState:
+          type: string
+        gitVersion:
+          type: string
+        goVersion:
+          type: string
+        platform:
+          type: string
     model.Metadata:
       type: object
       properties:
@@ -111,36 +135,6 @@ components:
         versions:
           type: array
           items: {}
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
-          type: string
-    version.Version:
-      type: object
-      properties:
-        buildDate:
-          type: string
-        compiler:
-          type: string
-        gitCommit:
-          type: string
-        gitTreeState:
-          type: string
-        gitVersion:
-          type: string
-        goVersion:
-          type: string
-        platform:
-          type: string
-    model.ClusterMetricsRes:
-      type: object
-      properties:
-        data:
-          type: object
-          additionalProperties:
-            type: integer
     model.FlowMetricsRes:
       type: object
       properties:
@@ -148,3 +142,9 @@ components:
           type: object
           additionalProperties:
             type: number
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string

@@ -171,12 +171,33 @@ components:
           $ref: '#/components/schemas/model.ConditionMatch'
         weight:
           type: integer
-    model.HTTPError:
+    model.ConditionMatch:
       type: object
       properties:
-        error:
-          description: error message
+        address:
+          $ref: '#/components/schemas/model.AddressMatch'
+        application:
+          $ref: '#/components/schemas/model.ListStringMatch'
+        param:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.ParamMatch'
+        service:
+          $ref: '#/components/schemas/model.ListStringMatch'
+    model.ParamMatch:
+      type: object
+      properties:
+        key:
           type: string
+        value:
+          $ref: '#/components/schemas/model.StringMatch'
+    model.ListStringMatch:
+      type: object
+      properties:
+        oneof:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.StringMatch'
     model.AddressMatch:
       type: object
       properties:
@@ -201,30 +222,9 @@ components:
           type: string
         wildcard:
           type: string
-    model.ListStringMatch:
+    model.HTTPError:
       type: object
       properties:
-        oneof:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.StringMatch'
-    model.ParamMatch:
-      type: object
-      properties:
-        key:
+        error:
+          description: error message
           type: string
-        value:
-          $ref: '#/components/schemas/model.StringMatch'
-    model.ConditionMatch:
-      type: object
-      properties:
-        address:
-          $ref: '#/components/schemas/model.AddressMatch'
-        application:
-          $ref: '#/components/schemas/model.ListStringMatch'
-        param:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.ParamMatch'
-        service:
-          $ref: '#/components/schemas/model.ListStringMatch'

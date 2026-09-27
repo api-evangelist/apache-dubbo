@@ -304,33 +304,60 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    model.HTTPError:
+    model.DynamicConfig:
       type: object
       properties:
-        error:
-          description: error message
+        application:
           type: string
+        configVersion:
+          type: string
+        configs:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.OverrideConfig'
+        enabled:
+          type: boolean
+        id:
+          type: string
+        service:
+          type: string
+        serviceGroup:
+          type: string
+        serviceVersion:
+          type: string
+    model.ConditionMatch:
+      type: object
+      properties:
+        address:
+          $ref: '#/components/schemas/model.AddressMatch'
+        application:
+          $ref: '#/components/schemas/model.ListStringMatch'
+        param:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.ParamMatch'
+        service:
+          $ref: '#/components/schemas/model.ListStringMatch'
+    model.ParamMatch:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          $ref: '#/components/schemas/model.StringMatch'
+    model.ListStringMatch:
+      type: object
+      properties:
+        oneof:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.StringMatch'
     model.AddressMatch:
       type: object
       properties:
         cird:
           type: string
         exact:
-          type: string
-        wildcard:
-          type: string
-    model.StringMatch:
-      type: object
-      properties:
-        empty:
-          type: string
-        exact:
-          type: string
-        noempty:
-          type: string
-        prefix:
-          type: string
-        regex:
           type: string
         wildcard:
           type: string
@@ -364,51 +391,24 @@ components:
           type: string
         type:
           type: string
-    model.ListStringMatch:
+    model.StringMatch:
       type: object
       properties:
-        oneof:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.StringMatch'
-    model.DynamicConfig:
+        empty:
+          type: string
+        exact:
+          type: string
+        noempty:
+          type: string
+        prefix:
+          type: string
+        regex:
+          type: string
+        wildcard:
+          type: string
+    model.HTTPError:
       type: object
       properties:
-        application:
+        error:
+          description: error message
           type: string
-        configVersion:
-          type: string
-        configs:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.OverrideConfig'
-        enabled:
-          type: boolean
-        id:
-          type: string
-        service:
-          type: string
-        serviceGroup:
-          type: string
-        serviceVersion:
-          type: string
-    model.ParamMatch:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          $ref: '#/components/schemas/model.StringMatch'
-    model.ConditionMatch:
-      type: object
-      properties:
-        address:
-          $ref: '#/components/schemas/model.AddressMatch'
-        application:
-          $ref: '#/components/schemas/model.ListStringMatch'
-        param:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.ParamMatch'
-        service:
-          $ref: '#/components/schemas/model.ListStringMatch'

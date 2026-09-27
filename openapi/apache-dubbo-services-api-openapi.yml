@@ -193,6 +193,113 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    model.RegistrySource:
+      type: string
+      enum:
+      - ALL
+      x-enum-varnames:
+      - All
+    model.Consumer:
+      type: object
+      properties:
+        address:
+          type: string
+        alived:
+          type: integer
+        application:
+          type: string
+        collected:
+          $ref: '#/components/schemas/time.Duration'
+        created:
+          type: string
+        expired:
+          $ref: '#/components/schemas/time.Duration'
+        hash:
+          type: string
+        id:
+          type: integer
+        ids:
+          type: array
+          items:
+            type: integer
+        miss:
+          type: boolean
+        modified:
+          type: string
+        now:
+          type: string
+        operator:
+          type: string
+        operatorAddress:
+          type: string
+        parameters:
+          type: string
+        registry:
+          type: string
+        result:
+          type: string
+        service:
+          type: string
+        statistics:
+          type: string
+        username:
+          type: string
+    model.ListServiceByPage:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.ServiceDTO'
+        first:
+          type: boolean
+        last:
+          type: boolean
+        offset:
+          type: integer
+        pageNumber:
+          type: string
+        size:
+          type: string
+        totalElements:
+          type: integer
+        totalPages:
+          type: integer
+    model.ServiceDTO:
+      type: object
+      properties:
+        appName:
+          type: string
+        group:
+          type: string
+        registrySource:
+          $ref: '#/components/schemas/model.RegistrySource'
+        service:
+          type: string
+        version:
+          type: string
+    model.ServiceDetailDTO:
+      type: object
+      properties:
+        application:
+          type: string
+        consumers:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.Consumer'
+        metadata: {}
+        providers:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.Provider'
+        service:
+          type: string
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
     time.Duration:
       type: integer
       enum:
@@ -221,33 +328,6 @@ components:
       - Second
       - Minute
       - Hour
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
-          type: string
-    model.ListServiceByPage:
-      type: object
-      properties:
-        content:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.ServiceDTO'
-        first:
-          type: boolean
-        last:
-          type: boolean
-        offset:
-          type: integer
-        pageNumber:
-          type: string
-        size:
-          type: string
-        totalElements:
-          type: integer
-        totalPages:
-          type: integer
     model.Provider:
       type: object
       properties:
@@ -301,83 +381,3 @@ components:
           type: string
         weight:
           type: integer
-    model.ServiceDetailDTO:
-      type: object
-      properties:
-        application:
-          type: string
-        consumers:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.Consumer'
-        metadata: {}
-        providers:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.Provider'
-        service:
-          type: string
-    model.ServiceDTO:
-      type: object
-      properties:
-        appName:
-          type: string
-        group:
-          type: string
-        registrySource:
-          $ref: '#/components/schemas/model.RegistrySource'
-        service:
-          type: string
-        version:
-          type: string
-    model.Consumer:
-      type: object
-      properties:
-        address:
-          type: string
-        alived:
-          type: integer
-        application:
-          type: string
-        collected:
-          $ref: '#/components/schemas/time.Duration'
-        created:
-          type: string
-        expired:
-          $ref: '#/components/schemas/time.Duration'
-        hash:
-          type: string
-        id:
-          type: integer
-        ids:
-          type: array
-          items:
-            type: integer
-        miss:
-          type: boolean
-        modified:
-          type: string
-        now:
-          type: string
-        operator:
-          type: string
-        operatorAddress:
-          type: string
-        parameters:
-          type: string
-        registry:
-          type: string
-        result:
-          type: string
-        service:
-          type: string
-        statistics:
-          type: string
-        username:
-          type: string
-    model.RegistrySource:
-      type: string
-      enum:
-      - ALL
-      x-enum-varnames:
-      - All
