@@ -193,12 +193,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    model.RegistrySource:
-      type: string
-      enum:
-      - ALL
-      x-enum-varnames:
-      - All
     model.Consumer:
       type: object
       properties:
@@ -244,27 +238,6 @@ components:
           type: string
         username:
           type: string
-    model.ListServiceByPage:
-      type: object
-      properties:
-        content:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.ServiceDTO'
-        first:
-          type: boolean
-        last:
-          type: boolean
-        offset:
-          type: integer
-        pageNumber:
-          type: string
-        size:
-          type: string
-        totalElements:
-          type: integer
-        totalPages:
-          type: integer
     model.ServiceDTO:
       type: object
       properties:
@@ -277,6 +250,12 @@ components:
         service:
           type: string
         version:
+          type: string
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
           type: string
     model.ServiceDetailDTO:
       type: object
@@ -294,40 +273,12 @@ components:
             $ref: '#/components/schemas/model.Provider'
         service:
           type: string
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
-          type: string
-    time.Duration:
-      type: integer
+    model.RegistrySource:
+      type: string
       enum:
-      - 1
-      - 1000
-      - 1000000
-      - 1000000000
-      - 60000000000
-      - 3600000000000
-      - 1
-      - 1000
-      - 1000000
-      - 1000000000
-      - 60000000000
-      - 3600000000000
+      - ALL
       x-enum-varnames:
-      - Nanosecond
-      - Microsecond
-      - Millisecond
-      - Second
-      - Minute
-      - Hour
-      - Nanosecond
-      - Microsecond
-      - Millisecond
-      - Second
-      - Minute
-      - Hour
+      - All
     model.Provider:
       type: object
       properties:
@@ -381,3 +332,52 @@ components:
           type: string
         weight:
           type: integer
+    model.ListServiceByPage:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.ServiceDTO'
+        first:
+          type: boolean
+        last:
+          type: boolean
+        offset:
+          type: integer
+        pageNumber:
+          type: string
+        size:
+          type: string
+        totalElements:
+          type: integer
+        totalPages:
+          type: integer
+    time.Duration:
+      type: integer
+      enum:
+      - 1
+      - 1000
+      - 1000000
+      - 1000000000
+      - 60000000000
+      - 3600000000000
+      - 1
+      - 1000
+      - 1000000
+      - 1000000000
+      - 60000000000
+      - 3600000000000
+      x-enum-varnames:
+      - Nanosecond
+      - Microsecond
+      - Millisecond
+      - Second
+      - Minute
+      - Hour
+      - Nanosecond
+      - Microsecond
+      - Millisecond
+      - Second
+      - Minute
+      - Hour

@@ -167,6 +167,12 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
     model.Region:
       type: object
       required:
@@ -180,10 +186,4 @@ components:
         service:
           type: string
         version:
-          type: string
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
           type: string

@@ -283,6 +283,12 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
     model.ParamMatch:
       type: object
       properties:
@@ -290,6 +296,22 @@ components:
           type: string
         value:
           $ref: '#/components/schemas/model.StringMatch'
+    model.Tag:
+      type: object
+      required:
+      - match
+      - name
+      properties:
+        addresses:
+          type: array
+          items:
+            type: string
+        match:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.ParamMatch'
+        name:
+          type: string
     model.TagRouteDto:
       type: object
       required:
@@ -335,26 +357,4 @@ components:
         regex:
           type: string
         wildcard:
-          type: string
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
-          type: string
-    model.Tag:
-      type: object
-      required:
-      - match
-      - name
-      properties:
-        addresses:
-          type: array
-          items:
-            type: string
-        match:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.ParamMatch'
-        name:
           type: string

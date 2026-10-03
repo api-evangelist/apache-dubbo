@@ -147,15 +147,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    model.ListMockRulesByPage:
-      type: object
-      properties:
-        content:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.MockRule'
-        total:
-          type: integer
     model.MockRule:
       type: object
       properties:
@@ -169,6 +160,15 @@ components:
           type: string
         serviceName:
           type: string
+    model.ListMockRulesByPage:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.MockRule'
+        total:
+          type: integer
     model.HTTPError:
       type: object
       properties:

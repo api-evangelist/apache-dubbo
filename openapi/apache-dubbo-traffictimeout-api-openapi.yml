@@ -161,6 +161,12 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
     model.Timeout:
       type: object
       required:
@@ -174,10 +180,4 @@ components:
         timeout:
           type: integer
         version:
-          type: string
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
           type: string

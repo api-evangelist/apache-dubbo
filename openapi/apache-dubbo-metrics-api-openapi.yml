@@ -92,13 +92,19 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    model.ClusterMetricsRes:
+    model.FlowMetricsRes:
       type: object
       properties:
         data:
           type: object
           additionalProperties:
-            type: integer
+            type: number
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
     version.Version:
       type: object
       properties:
@@ -135,16 +141,10 @@ components:
         versions:
           type: array
           items: {}
-    model.FlowMetricsRes:
+    model.ClusterMetricsRes:
       type: object
       properties:
         data:
           type: object
           additionalProperties:
-            type: number
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
-          type: string
+            type: integer
