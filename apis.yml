@@ -277,6 +277,9 @@ apis:
   - type: GitHubRepository
     url: https://github.com/apache/dubbo-admin
 common:
+  - type: CapabilityMap
+    url: capabilities/apache-dubbo-capability-edges.yml
+    name: Apache Dubbo Business Capability Map
   - type: Website
     url: https://www.apache.org/
   - type: IssueTracker
