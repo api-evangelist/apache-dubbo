@@ -137,6 +137,13 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    model.ParamMatch:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          $ref: '#/components/schemas/model.StringMatch'
     model.Gray:
       type: object
       required:
@@ -149,19 +156,21 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/model.Tag'
-    model.HTTPError:
+    model.StringMatch:
       type: object
       properties:
-        error:
-          description: error message
+        empty:
           type: string
-    model.ParamMatch:
-      type: object
-      properties:
-        key:
+        exact:
           type: string
-        value:
-          $ref: '#/components/schemas/model.StringMatch'
+        noempty:
+          type: string
+        prefix:
+          type: string
+        regex:
+          type: string
+        wildcard:
+          type: string
     model.Tag:
       type: object
       required:
@@ -178,18 +187,9 @@ components:
             $ref: '#/components/schemas/model.ParamMatch'
         name:
           type: string
-    model.StringMatch:
+    model.HTTPError:
       type: object
       properties:
-        empty:
-          type: string
-        exact:
-          type: string
-        noempty:
-          type: string
-        prefix:
-          type: string
-        regex:
-          type: string
-        wildcard:
+        error:
+          description: error message
           type: string

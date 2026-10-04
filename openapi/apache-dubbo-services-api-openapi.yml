@@ -193,6 +193,27 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    model.ListServiceByPage:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.ServiceDTO'
+        first:
+          type: boolean
+        last:
+          type: boolean
+        offset:
+          type: integer
+        pageNumber:
+          type: string
+        size:
+          type: string
+        totalElements:
+          type: integer
+        totalPages:
+          type: integer
     model.Consumer:
       type: object
       properties:
@@ -238,47 +259,34 @@ components:
           type: string
         username:
           type: string
-    model.ServiceDTO:
-      type: object
-      properties:
-        appName:
-          type: string
-        group:
-          type: string
-        registrySource:
-          $ref: '#/components/schemas/model.RegistrySource'
-        service:
-          type: string
-        version:
-          type: string
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
-          type: string
-    model.ServiceDetailDTO:
-      type: object
-      properties:
-        application:
-          type: string
-        consumers:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.Consumer'
-        metadata: {}
-        providers:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.Provider'
-        service:
-          type: string
-    model.RegistrySource:
-      type: string
+    time.Duration:
+      type: integer
       enum:
-      - ALL
+      - 1
+      - 1000
+      - 1000000
+      - 1000000000
+      - 60000000000
+      - 3600000000000
+      - 1
+      - 1000
+      - 1000000
+      - 1000000000
+      - 60000000000
+      - 3600000000000
       x-enum-varnames:
-      - All
+      - Nanosecond
+      - Microsecond
+      - Millisecond
+      - Second
+      - Minute
+      - Hour
+      - Nanosecond
+      - Microsecond
+      - Millisecond
+      - Second
+      - Minute
+      - Hour
     model.Provider:
       type: object
       properties:
@@ -332,52 +340,44 @@ components:
           type: string
         weight:
           type: integer
-    model.ListServiceByPage:
+    model.RegistrySource:
+      type: string
+      enum:
+      - ALL
+      x-enum-varnames:
+      - All
+    model.HTTPError:
       type: object
       properties:
-        content:
+        error:
+          description: error message
+          type: string
+    model.ServiceDetailDTO:
+      type: object
+      properties:
+        application:
+          type: string
+        consumers:
           type: array
           items:
-            $ref: '#/components/schemas/model.ServiceDTO'
-        first:
-          type: boolean
-        last:
-          type: boolean
-        offset:
-          type: integer
-        pageNumber:
+            $ref: '#/components/schemas/model.Consumer'
+        metadata: {}
+        providers:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.Provider'
+        service:
           type: string
-        size:
+    model.ServiceDTO:
+      type: object
+      properties:
+        appName:
           type: string
-        totalElements:
-          type: integer
-        totalPages:
-          type: integer
-    time.Duration:
-      type: integer
-      enum:
-      - 1
-      - 1000
-      - 1000000
-      - 1000000000
-      - 60000000000
-      - 3600000000000
-      - 1
-      - 1000
-      - 1000000
-      - 1000000000
-      - 60000000000
-      - 3600000000000
-      x-enum-varnames:
-      - Nanosecond
-      - Microsecond
-      - Millisecond
-      - Second
-      - Minute
-      - Hour
-      - Nanosecond
-      - Microsecond
-      - Millisecond
-      - Second
-      - Minute
-      - Hour
+        group:
+          type: string
+        registrySource:
+          $ref: '#/components/schemas/model.RegistrySource'
+        service:
+          type: string
+        version:
+          type: string

@@ -298,12 +298,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
-          type: string
     model.ConditionRouteDto:
       type: object
       required:
@@ -334,4 +328,10 @@ components:
         serviceGroup:
           type: string
         serviceVersion:
+          type: string
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
           type: string

@@ -174,6 +174,22 @@ components:
             $ref: '#/components/schemas/model.ParamMatch'
         service:
           $ref: '#/components/schemas/model.ListStringMatch'
+    model.ParamMatch:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          $ref: '#/components/schemas/model.StringMatch'
+    model.AddressMatch:
+      type: object
+      properties:
+        cird:
+          type: string
+        exact:
+          type: string
+        wildcard:
+          type: string
     model.StringMatch:
       type: object
       properties:
@@ -195,22 +211,13 @@ components:
         error:
           description: error message
           type: string
-    model.ParamMatch:
+    model.ListStringMatch:
       type: object
       properties:
-        key:
-          type: string
-        value:
-          $ref: '#/components/schemas/model.StringMatch'
-    model.AddressMatch:
-      type: object
-      properties:
-        cird:
-          type: string
-        exact:
-          type: string
-        wildcard:
-          type: string
+        oneof:
+          type: array
+          items:
+            $ref: '#/components/schemas/model.StringMatch'
     model.Weight:
       type: object
       required:
@@ -221,10 +228,3 @@ components:
           $ref: '#/components/schemas/model.ConditionMatch'
         weight:
           type: integer
-    model.ListStringMatch:
-      type: object
-      properties:
-        oneof:
-          type: array
-          items:
-            $ref: '#/components/schemas/model.StringMatch'
