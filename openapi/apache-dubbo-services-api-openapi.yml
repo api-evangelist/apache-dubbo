@@ -193,6 +193,65 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    model.RegistrySource:
+      type: string
+      enum:
+      - ALL
+      x-enum-varnames:
+      - All
+    model.Provider:
+      type: object
+      properties:
+        address:
+          type: string
+        alived:
+          type: integer
+        application:
+          type: string
+        created:
+          type: string
+        dynamic:
+          type: boolean
+        enabled:
+          type: boolean
+        expired:
+          $ref: '#/components/schemas/time.Duration'
+        hash:
+          type: string
+        id:
+          type: integer
+        ids:
+          type: array
+          items:
+            type: integer
+        miss:
+          type: boolean
+        modified:
+          type: string
+        now:
+          type: string
+        operator:
+          type: string
+        operatorAddress:
+          type: string
+        parameters:
+          type: string
+        registry:
+          type: string
+        registrySource:
+          $ref: '#/components/schemas/model.RegistrySource'
+        serialization:
+          type: string
+        service:
+          type: string
+        timeout:
+          type: integer
+        url:
+          type: string
+        username:
+          type: string
+        weight:
+          type: integer
     model.ListServiceByPage:
       type: object
       properties:
@@ -214,6 +273,12 @@ components:
           type: integer
         totalPages:
           type: integer
+    model.HTTPError:
+      type: object
+      properties:
+        error:
+          description: error message
+          type: string
     model.Consumer:
       type: object
       properties:
@@ -287,70 +352,18 @@ components:
       - Second
       - Minute
       - Hour
-    model.Provider:
+    model.ServiceDTO:
       type: object
       properties:
-        address:
+        appName:
           type: string
-        alived:
-          type: integer
-        application:
-          type: string
-        created:
-          type: string
-        dynamic:
-          type: boolean
-        enabled:
-          type: boolean
-        expired:
-          $ref: '#/components/schemas/time.Duration'
-        hash:
-          type: string
-        id:
-          type: integer
-        ids:
-          type: array
-          items:
-            type: integer
-        miss:
-          type: boolean
-        modified:
-          type: string
-        now:
-          type: string
-        operator:
-          type: string
-        operatorAddress:
-          type: string
-        parameters:
-          type: string
-        registry:
+        group:
           type: string
         registrySource:
           $ref: '#/components/schemas/model.RegistrySource'
-        serialization:
-          type: string
         service:
           type: string
-        timeout:
-          type: integer
-        url:
-          type: string
-        username:
-          type: string
-        weight:
-          type: integer
-    model.RegistrySource:
-      type: string
-      enum:
-      - ALL
-      x-enum-varnames:
-      - All
-    model.HTTPError:
-      type: object
-      properties:
-        error:
-          description: error message
+        version:
           type: string
     model.ServiceDetailDTO:
       type: object
@@ -367,17 +380,4 @@ components:
           items:
             $ref: '#/components/schemas/model.Provider'
         service:
-          type: string
-    model.ServiceDTO:
-      type: object
-      properties:
-        appName:
-          type: string
-        group:
-          type: string
-        registrySource:
-          $ref: '#/components/schemas/model.RegistrySource'
-        service:
-          type: string
-        version:
           type: string
